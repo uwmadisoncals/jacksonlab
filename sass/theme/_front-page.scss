@@ -1,0 +1,27 @@
+/**
+ * Applies to front-page.php
+ */
+
+body.home{
+
+	div#page{
+
+		header#branding{
+
+			hgroup.heading{
+
+				h1#site-title{
+				@extend .accessibleHide;
+				}
+
+				h2#site-description{
+				@extend .accessibleHide;
+				}
+
+			}
+
+		}
+
+	}
+
+}

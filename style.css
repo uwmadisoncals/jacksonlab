@@ -13,4 +13,6 @@ Tags:
 */
 
 @import url("../calswptheme/style.css");
-/*@import url("dist/styles/minified/master.min.css"); */
+
+@import url("dist/styles/minified/master.min.css");
+
