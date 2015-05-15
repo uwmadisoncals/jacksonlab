@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(['./js/jquery-2.1.3.js','./js/velocity.js','./js/velocity.ui.js','./js/CALSboilerplate_underscores_custom.js','./js/parallax.js','./js/tabs.js','./js/menu.js'])
+  return gulp.src(['./js/jquery-2.1.3.js','./js/jacksonlab.js'])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(rename({ suffix: '.min' }))
