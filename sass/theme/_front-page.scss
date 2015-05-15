@@ -4,20 +4,16 @@
 
 body.home{
 
-	div#page{
+	header#branding{
 
-		header#branding{
+		hgroup.heading{
 
-			hgroup.heading{
+			h1#site-title{
+			@extend .accessibleHide;
+			}
 
-				h1#site-title{
-				@extend .accessibleHide;
-				}
-
-				h2#site-description{
-				@extend .accessibleHide;
-				}
-
+			h2#site-description{
+			@extend .accessibleHide;
 			}
 
 		}
