@@ -27,7 +27,10 @@ http://www.fossildraw.com/draw.php?currow=6&curcol=2&font=3&grid=off&cellh=6&cel
 /**
  * Applies to front-page.php
  */
-.accessibleHide, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description {
+/**
+ * Applies to front-page.php
+ */
+.accessibleHide, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

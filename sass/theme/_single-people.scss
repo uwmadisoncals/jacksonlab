@@ -1,0 +1,23 @@
+/**
+ * Applies to front-page.php
+ */
+
+body.single-people{
+
+	header#branding{
+
+		hgroup.heading{
+
+			h1#site-title{
+			@extend .accessibleHide;
+			}
+
+			h2#site-description{
+			@extend .accessibleHide;
+			}
+
+		}
+
+	}
+
+}
