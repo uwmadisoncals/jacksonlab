@@ -1,0 +1,52 @@
+/**
+ * Applies to page-people.php
+ */
+
+body.page-people{
+
+	header#branding{
+
+		hgroup.heading{
+
+			h1#site-title{
+			@extend .accessibleHide;
+			}
+
+			h2#site-description{
+			@extend .accessibleHide;
+			}
+
+		}
+
+	}
+
+	div#main{
+
+		div#primary{
+
+			div#content{
+				width:100%;
+				article{
+					header{}
+					div.entry-content{
+						div.imageWrapper{
+							background-color:blue;
+							width:300px;
+							height:300px;
+							img{
+								display:block;
+								padding-left:20px;
+								padding-top:20px;
+							}
+						}
+						div.description{
+							background-color: tan;
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+}

@@ -26,7 +26,7 @@ get_header(); ?>
 
 					//Define arguments for new WP Query
 					$args = array(
-						'numberposts'=>-1,
+						'numberposts'=> -1,
 						'post_type'=>'people',
 						);
 
@@ -58,8 +58,7 @@ get_header(); ?>
 				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
 				
 			</div><!-- #content -->
-			<?php get_sidebar(); ?>
-			<div class="clear"></div>
+
 		</div><!-- #primary -->
 
 	</div>
