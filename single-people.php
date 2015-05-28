@@ -15,6 +15,8 @@ get_header(); ?>
 
 		<div id="primary">
 			<div id="content" role="main">
+			
+			
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
@@ -24,15 +26,13 @@ get_header(); ?>
 						<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'twentyeleven' ) ); ?></span>
 					</nav><!-- #nav-single -->
 
-					<?php get_template_part( 'content', 'single' ); ?>
+					<?php get_template_part( 'content', 'singlePerson' ); ?>
 
 					<?php comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content -->
-			<?php get_sidebar(); ?>
-			<div class="clear"></div>
 
 		</div><!-- #primary -->
 

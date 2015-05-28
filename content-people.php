@@ -7,7 +7,7 @@
  */
 ?>
 
-<?php 
+<?php
 
 		$firstNameObj = get_field_object("field_5564a3db10eb3");
 		$lastNameObj = get_field_object("field_5564a3fb10eb4");
@@ -20,23 +20,29 @@
 		 //echo $profTitleObj['label'];
 		 //echo $descObj['label'];
 		 
+		 $thisID = get_the_ID();
+
 		 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<h1 class="entry-title"><?php the_title(); ?></h1>
+		<h1 class="entry-title"><a href="<?php echo get_post_permalink($thisID); ?>"><?php the_title(); ?></a></h1>
 		<h3 class="proTitle"><?php  echo $profTitleObj['value']; ?></h3>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		
 	<div class="imageWrapper">
-		<img src="<?php echo $photoObj['value']['sizes']['thumbnail']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260">
+
+		<a href="<?php echo get_post_permalink($thisID); ?>" title="login"><img src="<?php echo $photoObj['value']['sizes']['thumbnail']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260"></a>
+		
 	</div><!--END .imageWrapper -->
 
-	<div class="description">
+	<div class="description people-description">
 		<?php echo $descObj['value']; ?>
 	</div>
+	<div class="cf"></div>
 		
 
 		<?php //the_content(); ?>
@@ -49,10 +55,10 @@
 
 
 
-<?php 
+<?php /*
 logit( $firstNameObj, '$firstNameObj:' ); 
 logit( $lastNameObj, '$lastNameObj:' ); 
 logit( $profTitleObj, '$profTitleObj:' ); 
 logit( $descObj, '$descObj:' );
-logit( $photoObj, '$photoObj:' ); 
+logit( $photoObj, '$photoObj:' ); */
 ?>
