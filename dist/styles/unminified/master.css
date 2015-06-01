@@ -90,6 +90,9 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
  * Applies to page.php
  */
 /**
+ * Applies to single posts. see single.php
+ */
+/**
  * Applies to single posts. see single-people.php
  */
 body.single-people div#main div#primary div#content {
@@ -144,7 +147,10 @@ body.page-people div#main div#primary div#content {
       height: 300px;
       overflow: hidden; }
 
-.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description {
+/**
+ * Applies to 404.php.
+ */
+.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

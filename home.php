@@ -21,11 +21,10 @@ get_header(); ?>
 		<div id="primary">
 		
 			<div id="content" role="main">
-			<p>this is home.php</p>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+					<?php get_template_part( 'content', 'home' ); ?>
 
 					<?php comments_template( '', true ); ?>
 

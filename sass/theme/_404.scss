@@ -1,0 +1,23 @@
+/**
+ * Applies to 404.php.
+ */
+
+body.error404{
+
+	header#branding{
+
+		hgroup.heading{
+
+			h1#site-title{
+			@extend .accessibleHide;
+			}
+
+			h2#site-description{
+			@extend .accessibleHide;
+			}
+
+		}
+
+	}
+	
+}
