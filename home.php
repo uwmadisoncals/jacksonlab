@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying home.php (the designated blog, when static front page is chosen.)
+ * The template for displaying home.php (body.blog)(the designated blog, when static front page is chosen.)
  * @package WordPress
  * @subpackage CALSv1
  * @since CALS 1.0
@@ -22,7 +22,8 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'content', 'home' ); ?>
+					<?php //get_template_part( 'content', 'home' ); ?>
+					
 
 					<?php comments_template( '', true ); ?>
 
