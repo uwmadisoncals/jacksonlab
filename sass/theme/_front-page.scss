@@ -18,6 +18,23 @@ body.home{
 
 		}
 
-	}
+	}//END header#branding
 
-}
+	div#main{
+
+		div#primary{
+
+			div#content{
+				width:100%;
+
+				article{
+					h1.entry-title{
+						//@extend .accessibleHide;
+					}
+				}
+			}
+		}
+
+	}//END div#main
+
+}//END body.home

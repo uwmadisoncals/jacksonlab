@@ -9,9 +9,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 
-		<!--<h1 class="entry-title"><?php the_title(); ?></h1> -->
-
 		<h1 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
 		
 	</header><!-- .entry-header -->
 
@@ -23,6 +22,10 @@
 		
 		<?php } 
 		the_content(); ?>
+
+	<span> <?php the_category('</span> <span>'); ?> </span>
+
+
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-meta">

@@ -13,8 +13,25 @@
 
 get_header(); ?>
 
+<?php 
+global $wpdb;
+
+  $idObj = get_category_by_slug('frontpage-feature'); 
+  $id = $idObj->term_id;
+  global $id;
+
+//logit( $wpdb, '$wpdb: ');
+logit( $id, '$id: ');
+//logit(  $idObj, '$idObj: ');
+
+?>
+
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
+
+<div class="collegeFeature2">
+  	<?php if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 6 );} ?> <!-- Production: 1755 , Local: 6 -->
+</div>
 
 	<div id="main">
 
@@ -22,20 +39,55 @@ get_header(); ?>
 		
 			<div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php 
 
-					<?php get_template_part( 'content', 'home' ); ?>
+			//Define arguments for new WP Query
+			$args = array(
+				'numberposts'=> -1,
+				'post_type'=>array('post','page'),
+				'category_name'=>'frontpage-feature'
+				);
 
-					<?php comments_template( '', true ); ?>
+			//Instantiate new WP Query Object
+			$frontpage_query = new WP_Query($args);
 
-				<?php endwhile; // end of the loop. ?>
+			?>
 				
+
+				<?php 
+
+				if($frontpage_query->have_posts()) :
+
+					while ( $frontpage_query->have_posts() ) : $frontpage_query->the_post(); ?>
+
+						<?php get_template_part( 'content', 'home' ); ?>
+
+						<?php comments_template( '', true ); ?>
+
+					<?php endwhile; // end of the loop. ?>
+
+				<?php else: ?>
+
+					<p>there are no matching posts</p>
+
+				<?php endif ?>
+
+				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+
+				<?php //call widget 'jacksonlab-widget-1'
+
+				if(is_active_sidebar('jacksonlab-widget-1' )) :
+					dynamic_sidebar('jacksonlab-widget-1' );
+				endif;
+
+				 ?>
 			</div><!-- #content -->
-			<?php get_sidebar(); ?>
-			<div class="clear"></div>
+
 		</div><!-- #primary -->
 
 	</div>
 <?php get_footer(); ?>
+
+
 
 </div>

@@ -86,6 +86,9 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
 /**
  * Applies to front-page.php
  */
+body.home div#main div#primary div#content {
+  width: 100%; }
+
 /**
  * Applies home.php 
  */

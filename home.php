@@ -10,9 +10,7 @@ get_header(); ?>
 
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
-  <div class="collegeFeature2">
-  	<?php if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 6 );} ?> <!-- Production: 1755 , Local: 6 -->
-  </div>
+  
 
 	<div id="main">
 
@@ -22,7 +20,7 @@ get_header(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php //get_template_part( 'content', 'home' ); ?>
+					<?php get_template_part( 'content', 'home' ); ?>
 					
 
 					<?php comments_template( '', true ); ?>
