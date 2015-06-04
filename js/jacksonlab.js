@@ -26,6 +26,13 @@
 	    	});
 	    }
 
+	    //Applies enclosed js to template page-home.php
+	    if($('body').is(".page-home")){
+
+	    	//Add clearfix after every third article
+	    	$("article:nth-of-type(3n)").after('<p class=\"cf\"></p>');
+	    }
+
 	});
 
 })( jQuery );

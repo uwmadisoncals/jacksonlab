@@ -88,6 +88,17 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
  */
 body.home div#main div#primary div#content {
   width: 100%; }
+  body.home div#main div#primary div#content div.featured-article-wrapper {
+    background-color: pink; }
+    body.home div#main div#primary div#content div.featured-article-wrapper article {
+      width: 25%;
+      margin-bottom: 0 auto;
+      display: block;
+      float: left;
+      margin: 1.5em;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
 
 /**
  * Applies home.php 

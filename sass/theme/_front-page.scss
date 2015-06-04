@@ -26,14 +26,30 @@ body.home{
 
 			div#content{
 				width:100%;
+				div.featured-article-wrapper{
+					background-color: pink;
+					//margin-top:2em;
+					article{
+						width:25%;
+						//height:300px;
+						margin-bottom:0 auto;
+						display:block;
+						float:left;
+						margin:1.5em;
+						box-sizing:border-box;
 
-				article{
-					h1.entry-title{
-						//@extend .accessibleHide;
-					}
-				}
-			}
-		}
+						h1.entry-title{
+							//@extend .accessibleHide;
+
+						}
+
+					}//END article
+
+				}//END .featured-article-wrapper
+
+			}//END div#content
+
+		}//END #primary
 
 	}//END div#main
 

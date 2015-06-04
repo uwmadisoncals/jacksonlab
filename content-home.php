@@ -6,11 +6,40 @@
  * @since CALS 1.0
  */
 ?>
+
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+
+
 	<header class="entry-header">
 
-		<h1 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<?php 
+			$postCats = get_the_category();
+			if ($postCats) {
+			  foreach($postCats as $cat) {
+
+			    //echo $cat->name . ' ';
+			    
+			    switch($cat->name){
+
+			    	case "research":
+			    	echo "<h1>Research</h1>";
+			    	break;
+
+			    	default:
+			    	break;
+
+			    }
+			  }
+			}
+
+		 ?>
+
+		<h2 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
+		<h3 class="post-author"><?php the_author(); ?></h3>
+		<h3 class="post-date"><?php the_time('F j, Y'); ?></h3>
 		
 	</header><!-- .entry-header -->
 
@@ -23,7 +52,11 @@
 		<?php } 
 		the_content(); ?>
 
-	<span> <?php the_category('</span> <span>'); ?> </span>
+	<span> Categories: <?php the_category('</span> <span>'); ?> </span>
+	<br>
+	<span><?php the_tags(); ?></span>
+
+
 
 
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>

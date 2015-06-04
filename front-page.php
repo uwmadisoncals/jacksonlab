@@ -53,34 +53,38 @@ logit( $id, '$id: ');
 
 			?>
 				
+				<div class="featured-article-wrapper">
 
-				<?php 
+					<?php if($frontpage_query->have_posts()) : ?>
 
-				if($frontpage_query->have_posts()) :
+						<?php while ( $frontpage_query->have_posts() ) : $frontpage_query->the_post(); ?>
+							
+							<?php get_template_part( 'content', 'home' ); ?>
+						
+							<?php comments_template( '', true ); ?>
 
-					while ( $frontpage_query->have_posts() ) : $frontpage_query->the_post(); ?>
+						<?php endwhile; // end of the loop. ?>
 
-						<?php get_template_part( 'content', 'home' ); ?>
+					<?php else: ?>
 
-						<?php comments_template( '', true ); ?>
+						<p>there are no matching posts</p>
 
-					<?php endwhile; // end of the loop. ?>
+					<?php endif ?>
 
-				<?php else: ?>
+					<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
 
-					<p>there are no matching posts</p>
+					<?php //call widget 'jacksonlab-widget-1'
 
-				<?php endif ?>
+					if(is_active_sidebar('jacksonlab-widget-1' )) :
+						dynamic_sidebar('jacksonlab-widget-1' );
+					endif;
 
-				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+					 ?>
+					 
+					<div class="cf"></div> <!-- clears both to bottom of .featured-article-wrapper-->
 
-				<?php //call widget 'jacksonlab-widget-1'
+				 </div><!-- END .featured-article-wrapper -->
 
-				if(is_active_sidebar('jacksonlab-widget-1' )) :
-					dynamic_sidebar('jacksonlab-widget-1' );
-				endif;
-
-				 ?>
 			</div><!-- #content -->
 
 		</div><!-- #primary -->
