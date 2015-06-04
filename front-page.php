@@ -41,6 +41,9 @@ logit( $id, '$id: ');
 
 			<?php 
 
+			global $post;
+			$post_backup = $post;
+
 			//Define arguments for new WP Query
 			$args = array(
 				'numberposts'=> -1,
@@ -71,7 +74,8 @@ logit( $id, '$id: ');
 
 					<?php endif ?>
 
-					<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+					<?php //wp_reset_query();  // Restore global post data stomped by the_post(). ?>
+					<?php $post = $post_backup; ?>
 
 					<?php //call widget 'jacksonlab-widget-1'
 

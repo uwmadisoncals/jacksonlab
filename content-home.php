@@ -14,29 +14,7 @@
 
 	<header class="entry-header">
 
-		<?php 
-			$postCats = get_the_category();
-			if ($postCats) {
-			  foreach($postCats as $cat) {
-
-			    //echo $cat->name . ' ';
-			    
-			    switch($cat->name){
-
-			    	case "research":
-			    	echo "<h1>Research</h1>";
-			    	break;
-
-			    	default:
-			    	break;
-
-			    }
-			  }
-			}
-
-		 ?>
-
-		<h2 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
 		<h3 class="post-author"><?php the_author(); ?></h3>
 		<h3 class="post-date"><?php the_time('F j, Y'); ?></h3>
