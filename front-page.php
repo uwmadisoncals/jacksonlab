@@ -62,7 +62,11 @@ logit( $id, '$id: ');
 
 						<?php while ( $frontpage_query->have_posts() ) : $frontpage_query->the_post(); ?>
 							
-							<?php get_template_part( 'content', 'home' ); ?>
+							<?php //get_template_part( 'content', 'home' ); ?>
+
+							<?php get_template_part( 'loop', 'research' ); ?>
+
+							<?php //get_template_part( 'loop', 'cat2' ); ?>
 						
 							<?php comments_template( '', true ); ?>
 

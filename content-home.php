@@ -7,8 +7,16 @@
  */
 ?>
 
+<?php $do_not_duplicate = $post->ID; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+	<?php 
+	if(has_category("research" )){
+		echo "<p>RESEARCH</p>" . $do_not_duplicate;
+	}else
+		echo "<p> -*- </p>";
+	?>
 
 
 
