@@ -28,48 +28,57 @@ body.home{
 
 			div#content{
 				width:100%;
+				padding:0;
 
+				div.slider-content{}
 
-				article{
-					
-					h1.entry-title{
+				div.non-slider-content{
+					padding:30px;
+
+					article{
+						
+						h1.entry-title{
+						}
+
+					}//END article
+
+					article.loop-default{
+					@extend .accessibleHide;
 					}
 
-				}//END article
+					article.loop-1{
+					background-color:red;
+					}
 
-				article.loop-1{
-				background-color:red;
-				}
+					article.loop-2{
+					background-color:orange;
+					}
 
-				article.loop-2{
-				background-color:orange;
-				}
+					article.loop-3{
+					background-color:yellow;
+					}
 
-				article.loop-3{
-				background-color:yellow;
-				}
+					article.loop-4{
+					background-color:green;
+					}
 
-				article.loop-4{
-				background-color:green;
-				}
+					article.loop-5{
+					background-color:blue;
+					}
 
-				article.loop-5{
-				background-color:blue;
-				}
+					article.loop-6{
+					background-color:purple;
+					}
 
-				article.loop-6{
-				background-color:purple;
-				}
+					article.loop-7{
+					background-color:cyan;
+					}
 
-				article.loop-7{
-				background-color:cyan;
-				}
+					article.loop-8{
+					background-color:tan;
+					}
 
-				article.loop-8{
-				background-color:tan;
-				}
-
-
+			}//END div.non-slider-content
 
 			}//END div#content
 

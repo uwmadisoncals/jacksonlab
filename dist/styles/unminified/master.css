@@ -217,23 +217,26 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
  * Applies to front-page.php
  */
 body.home div#main div#primary div#content {
-  width: 100%; }
-  body.home div#main div#primary div#content article.loop-1 {
-    background-color: red; }
-  body.home div#main div#primary div#content article.loop-2 {
-    background-color: orange; }
-  body.home div#main div#primary div#content article.loop-3 {
-    background-color: yellow; }
-  body.home div#main div#primary div#content article.loop-4 {
-    background-color: green; }
-  body.home div#main div#primary div#content article.loop-5 {
-    background-color: blue; }
-  body.home div#main div#primary div#content article.loop-6 {
-    background-color: purple; }
-  body.home div#main div#primary div#content article.loop-7 {
-    background-color: cyan; }
-  body.home div#main div#primary div#content article.loop-8 {
-    background-color: tan; }
+  width: 100%;
+  padding: 0; }
+  body.home div#main div#primary div#content div.non-slider-content {
+    padding: 30px; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-1 {
+      background-color: red; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-2 {
+      background-color: orange; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-3 {
+      background-color: yellow; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-4 {
+      background-color: green; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-5 {
+      background-color: blue; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-6 {
+      background-color: purple; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-7 {
+      background-color: cyan; }
+    body.home div#main div#primary div#content div.non-slider-content article.loop-8 {
+      background-color: tan; }
 
 /**
  * Applies home.php 
@@ -302,7 +305,7 @@ body.page-people div#main div#primary div#content {
 /**
  * Applies to 404.php.
  */
-.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.blog header#branding hgroup.heading h1#site-title, body.blog header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
+.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.blog header#branding hgroup.heading h1#site-title, body.blog header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

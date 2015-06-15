@@ -30,15 +30,23 @@ $GLOBALS['currentloop'] = "0";
 	<div id="main">
 
 		<div id="primary">
-		
-			<div id="content" role="main">
 
-			<div id="owl-example" class="owl-carousel">
+
+
+			<div id="content" role="main">
+			<div class="slider-content">
+
+				<div id="jacksonlab-owl-carousel" class="owl-carousel">
+
 				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
 				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/Biofuel-Trial-Aerial-3.jpg" alt="">Your Content</div>
 				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
 				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/Biofuel-Trial-Aerial-3.jpg" alt="">Your Content</div>
-			</div>
+				</div>
+			</div><!--END .slider-content -->
+
+			<div class="non-slider-content">
+
 
 				<!-- Start The default Loop -->
 				<?php
@@ -91,7 +99,7 @@ $GLOBALS['currentloop'] = "0";
 
 
 
-
+			</div><!--END .non-slider-content
 
 			</div><!-- #content -->
 			<?php// get_sidebar(); ?>
