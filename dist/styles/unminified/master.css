@@ -86,22 +86,24 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
 /**
  * Applies to front-page.php
  */
-body.home div#main div#primary div#content article.loop-1 {
-  background-color: red; }
-body.home div#main div#primary div#content article.loop-2 {
-  background-color: orange; }
-body.home div#main div#primary div#content article.loop-3 {
-  background-color: yellow; }
-body.home div#main div#primary div#content article.loop-4 {
-  background-color: green; }
-body.home div#main div#primary div#content article.loop-5 {
-  background-color: blue; }
-body.home div#main div#primary div#content article.loop-6 {
-  background-color: purple; }
-body.home div#main div#primary div#content article.loop-7 {
-  background-color: cyan; }
-body.home div#main div#primary div#content article.loop-8 {
-  background-color: tan; }
+body.home div#main div#primary div#content {
+  width: 100%; }
+  body.home div#main div#primary div#content article.loop-1 {
+    background-color: red; }
+  body.home div#main div#primary div#content article.loop-2 {
+    background-color: orange; }
+  body.home div#main div#primary div#content article.loop-3 {
+    background-color: yellow; }
+  body.home div#main div#primary div#content article.loop-4 {
+    background-color: green; }
+  body.home div#main div#primary div#content article.loop-5 {
+    background-color: blue; }
+  body.home div#main div#primary div#content article.loop-6 {
+    background-color: purple; }
+  body.home div#main div#primary div#content article.loop-7 {
+    background-color: cyan; }
+  body.home div#main div#primary div#content article.loop-8 {
+    background-color: tan; }
 
 /**
  * Applies home.php 

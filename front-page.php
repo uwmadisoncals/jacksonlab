@@ -21,6 +21,10 @@ $GLOBALS['currentloop'] = "0";
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 
+<div class="collegeFeature2">
+<?php if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 1777 );} ?>
+</div>
+
 	<div id="main">
 
 		<div id="primary">
@@ -29,6 +33,7 @@ $GLOBALS['currentloop'] = "0";
 
 				<!-- Start The default Loop -->
 				<?php
+
 				if(have_posts()) : ?>
 
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -50,7 +55,7 @@ $GLOBALS['currentloop'] = "0";
 				<?php get_template_part('frontpage','loop_1' ); ?>
 
 				<!-- Include Custom Loop 2 0f 8, cat "science of agroecology" (27) -->
-				<?php get_template_part('frontpage','loop_2' ); ?>
+				<?php //get_template_part('frontpage','loop_2' ); ?>
 
 				<!-- Include Custom Loop 3 0f 8, cat "carbon" (28) -->
 				<?php get_template_part('frontpage','loop_3' ); ?>
@@ -65,7 +70,7 @@ $GLOBALS['currentloop'] = "0";
 				<?php get_template_part('frontpage','loop_6' ); ?>
 
 				<!-- Include Custom Loop 7 0f 8, cat "agriculture Ecosystems" (32) -->
-				<?php get_template_part('frontpage','loop_7' ); ?>
+				<?php //get_template_part('frontpage','loop_7' ); ?>
 
 				<!-- Include Custom Loop 8 0f 8, cat "icelandic" (33) -->
 				<?php  get_template_part('frontpage','loop_8' ); ?>

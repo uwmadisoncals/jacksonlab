@@ -4,7 +4,7 @@
 <?php
 
 $args = array(
-"posts_per_page" => "-1",
+"posts_per_page" => "1",
 "cat"=>"26"
 //"cat"=>"666"
 );
