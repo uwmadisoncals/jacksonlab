@@ -2,6 +2,19 @@
 
 	$( document ).ready(function() {
 
+
+
+	$("#owl-example").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+ 
+      items : 2,
+      itemsDesktop : [1199,3],
+      itemsDesktopSmall : [979,3]
+ 
+  	});
+
+
 	    //alert("test");
 	    
 	    //Applies enclosed js to template page-people.php
@@ -31,6 +44,10 @@
 
 	    	//Add clearfix after every third article
 	    	$("article:nth-of-type(3n)").after('<p class=\"cf\"></p>');
+	    }
+
+	    if($('body').is(".home")){
+
 	    }
 
 	});

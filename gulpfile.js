@@ -32,7 +32,7 @@ gulp.task('styles', function() {
 
 // Scripts
 gulp.task('scripts', function() {
-  return gulp.src(['./js/jquery-2.1.3.js','js/jquery.iosslider.js', 'jquery.isotope.min.js', 'jquery-css-transform.js', 'jquery-rotate.js', 'browserdetect.js', 'mainactions.js', './js/jacksonlab.js'])
+  return gulp.src(['./js/jquery-2.1.3.js','js/jquery.iosslider.js', 'jquery.isotope.min.js', 'jquery-css-transform.js', 'jquery-rotate.js', 'browserdetect.js', 'mainactions.js','./js/owl.carousel.min.js', './js/jacksonlab.js'])
     .pipe(concat('main.js'))
     .pipe(gulp.dest('dist/scripts'))
     .pipe(rename({ suffix: '.min' }))
