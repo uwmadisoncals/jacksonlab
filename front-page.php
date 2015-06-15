@@ -13,16 +13,7 @@
 
 get_header(); ?>
 
-<?php 
-$args = array(
-"posts_per_page" => "-1",
-//"cat"=>"25"
-"cat"=>"666"
-);
 
-$frontpageQuery = new WP_Query($args) ; 
-
- ?>
 
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
@@ -33,9 +24,11 @@ $frontpageQuery = new WP_Query($args) ;
 		
 			<div id="content" role="main">
 
-				<?php if($frontpageQuery->have_posts()) : ?>
+				<!-- Start The default Loop -->
+				<?php
+				if(have_posts()) : ?>
 
-					<?php while ( $frontpageQuery->have_posts() ) : $frontpageQuery->the_post(); ?>
+					<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php get_template_part( 'content', 'front_page' ); ?>
 
@@ -44,9 +37,45 @@ $frontpageQuery = new WP_Query($args) ;
 					<?php endwhile; // end of the loop. ?>
 
 				<?php else: ?>
-					<p>sorry no posts found</p>
+					<p>sorry no posts found from default query</p>
 
 				<?php endif; ?>
+				<!-- End The default Loop -->
+				
+
+				<!-- Include Custom Loop 1 0f 8, cat "forages" (26) -->
+				<?php get_template_part('frontpage','loop_1' ); ?>
+
+				<!-- Include Custom Loop 2 0f 8, cat "science of agroecology" (27) -->
+				<?php get_template_part('frontpage','loop_2' ); ?>
+
+				<!-- Include Custom Loop 3 0f 8, cat "carbon" (28) -->
+				<?php get_template_part('frontpage','loop_3' ); ?>
+
+				<!-- Include Custom Loop 4 0f 8, cat "cropping" (29) -->
+				<?php get_template_part('frontpage','loop_4' ); ?>
+	
+				<!-- Include Custom Loop 5 0f 8, cat "pasture agroecosystems" (30) -->
+				<?php get_template_part('frontpage','loop_5' ); ?>
+				
+				<!-- Include Custom Loop 6 0f 8, cat "grasses" (31) -->
+				<?php get_template_part('frontpage','loop_6' ); ?>
+
+				<!-- Include Custom Loop 7 0f 8, cat "agriculture Ecosystems" (32) -->
+				<?php get_template_part('frontpage','loop_7' ); ?>
+
+				<!-- Include Custom Loop 8 0f 8, cat "icelandic" (33) -->
+				<?php  get_template_part('frontpage','loop_8' ); ?>
+				
+				
+				<!-- restore global $post to default loop after all custom WP_Queries -->
+				<?php wp_reset_postdata(); ?>
+
+
+
+
+
+
 			</div><!-- #content -->
 			<?php// get_sidebar(); ?>
 			<div class="clear"></div>
