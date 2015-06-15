@@ -13,6 +13,9 @@
 
 get_header(); ?>
 
+<?php 
+$GLOBALS['currentloop'] = "0";
+ ?>
 
 
 <div class="mobileScroll">
@@ -67,7 +70,7 @@ get_header(); ?>
 				<!-- Include Custom Loop 8 0f 8, cat "icelandic" (33) -->
 				<?php  get_template_part('frontpage','loop_8' ); ?>
 				
-				
+
 				<!-- restore global $post to default loop after all custom WP_Queries -->
 				<?php wp_reset_postdata(); ?>
 

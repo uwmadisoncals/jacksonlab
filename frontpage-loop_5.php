@@ -9,6 +9,8 @@ $args = array(
 //"cat"=>"666"
 );
 
+$GLOBALS['currentloop'] = "5";
+
 $frontpageQuery5 = new WP_Query($args) ; 
 
 if($frontpageQuery5->have_posts()) : ?>
@@ -26,3 +28,5 @@ if($frontpageQuery5->have_posts()) : ?>
 
 <?php endif; ?>
 <!-- End Custom Loop 5 0f 8 -->
+
+<?php $GLOBALS['currentloop'] = "0";  ?>

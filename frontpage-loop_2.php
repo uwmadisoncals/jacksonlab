@@ -9,11 +9,15 @@ $args = array(
 //"cat"=>"666"
 );
 
+$GLOBALS['currentloop'] = "2";
+
 $frontpageQuery2 = new WP_Query($args) ; 
 
 if($frontpageQuery2->have_posts()) : ?>
 
 	<?php while ( $frontpageQuery2->have_posts() ) : $frontpageQuery2->the_post(); ?>
+
+		<?php //logit($GLOBALS['currentloop'], 'currentloop_from2: '); ?>
 
 		<?php get_template_part( 'content', 'front_page' ); ?>
 
@@ -26,3 +30,5 @@ if($frontpageQuery2->have_posts()) : ?>
 
 <?php endif; ?>
 <!-- End Custom Loop 2 0f 8 -->
+
+<?php $GLOBALS['currentloop'] = "0";  ?>

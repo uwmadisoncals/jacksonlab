@@ -9,11 +9,23 @@ $args = array(
 //"cat"=>"666"
 );
 
-$frontpageQuery = new WP_Query($args) ; 
+$GLOBALS['currentloop'] = "1";
+
+
+$frontpageQuery = new WP_Query($args) ;
 
 if($frontpageQuery->have_posts()) : ?>
 
 	<?php while ( $frontpageQuery->have_posts() ) : $frontpageQuery->the_post(); ?>
+
+		<?php
+
+
+		//logit($frontpageQuery->posts, '$frontpageQuery->posts: ');
+
+		//logit($GLOBALS['currentloop'], 'currentloop: ');
+
+		 ?>
 
 		<?php get_template_part( 'content', 'front_page' ); ?>
 
@@ -26,3 +38,6 @@ if($frontpageQuery->have_posts()) : ?>
 
 <?php endif; ?>
 <!-- End Custom Loop 1 0f 8 -->
+
+
+<?php $GLOBALS['currentloop'] = "0";  ?>

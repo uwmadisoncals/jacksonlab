@@ -21,33 +21,54 @@ body.home{
 	}//END header#branding
 
 
-/*
+
 	div#main{
 
 		div#primary{
 
 			div#content{
-				width:100%;
-				div.featured-article-wrapper{
-					background-color: pink;
-					//margin-top:2em;
-					article{
-						width:25%;
-						//height:300px;
-						margin-bottom:0 auto;
-						display:block;
-						float:left;
-						margin:1.5em;
-						box-sizing:border-box;
 
-						h1.entry-title{
-							//@extend .accessibleHide;
 
-						}
+				article{
+					
+					h1.entry-title{
+					}
 
-					}//END article
+				}//END article
 
-				}//END .featured-article-wrapper
+				article.loop-1{
+				background-color:red;
+				}
+
+				article.loop-2{
+				background-color:orange;
+				}
+
+				article.loop-3{
+				background-color:yellow;
+				}
+
+				article.loop-4{
+				background-color:green;
+				}
+
+				article.loop-5{
+				background-color:blue;
+				}
+
+				article.loop-6{
+				background-color:purple;
+				}
+
+				article.loop-7{
+				background-color:cyan;
+				}
+
+				article.loop-8{
+				background-color:tan;
+				}
+
+
 
 			}//END div#content
 
@@ -55,6 +76,6 @@ body.home{
 
 	}//END div#main
 
-	*/
+	
 
 }//END body.home
