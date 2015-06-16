@@ -43,8 +43,25 @@ $GLOBALS['currentloop'] = "0";
 
 						//WP_Query Args
 						$jlSliderArgs = array(
-						"post_type"=> "jacksonlab-slider",
-						"posts_per_page" => "2",
+						"post_type"=> array("jacksonlab-slider","post"),
+						"posts_per_page" => "-1",
+						//"category__in"=> array(25), //categories, 34:jacksonlab-slide-research , 25:research
+						//"meta_key" =>"jacksonlab-slides-category-field",
+						//"meta_value"=>"research"
+						"tax_query"=> array(
+							"relation"=> "OR",
+							array(
+							"taxonomy" => "jacksonlab-slides-category",
+							"field" => "slug",
+							"terms" => array("research")
+							),
+							array(
+							"taxonomy" => "category",
+							"field" => "slug",
+							"terms"=>array("research")
+							)
+						)
+	
 
 						);
 						//New WP_Query
@@ -76,16 +93,20 @@ $GLOBALS['currentloop'] = "0";
 							logit($jsSlider_image_alt,'$jsSlider_image_alt: ');
 							//logit($jlSlider_title['value'],'$jlSlider_title value: ');
 
-							?>							
+							?>		
+
+								<?php if ( 'jacksonlab-slider' == get_post_type() ) : ?>
 								<div>
 									<img src="<?php echo $jsSlider_image_url; ?>" alt="<?php echo $jsSlider_image_alt; ?>">
 									<div class="text-content">
-										<h3><?php echo $jlSlider_title['value']; ?></h3>
+										<a href="<?php  ?>"><?php echo $jlSlider_title['value']; ?></a>
+
 										<p><?php echo $jlSlider_excerpt['value']; ?><span><?php  ?></span></p>
 									</div>
 									
 								</div>
-								
+								<?php endif; ?>
+
 							<?php endwhile; // end of the loop. ?>
 
 						<?php else: ?>
