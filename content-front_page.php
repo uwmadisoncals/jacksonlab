@@ -9,7 +9,7 @@
 
 
 <?php
-logit($GLOBALS['currentloop'], 'currentloop: ');
+//logit($GLOBALS['currentloop'], 'currentloop: ');
 
 switch( $GLOBALS['currentloop'] ){
 	case "0" :

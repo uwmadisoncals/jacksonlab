@@ -2509,7 +2509,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
  
       //autoPlay: 3000, //Set AutoPlay to 3 seconds
       singleItem:true,
-      navigation:false
+
  
   	});
 

@@ -8,7 +8,7 @@
  
       //autoPlay: 3000, //Set AutoPlay to 3 seconds
       singleItem:true,
-      navigation:false
+
  
   	});
 
