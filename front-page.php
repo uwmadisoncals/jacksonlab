@@ -38,10 +38,10 @@ $GLOBALS['currentloop'] = "0";
 
 				<div id="jacksonlab-owl-carousel" class="owl-carousel">
 
-				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
-				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/Biofuel-Trial-Aerial-3.jpg" alt="">Your Content</div>
-				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
-				<div><img style="display:block;width:100%;height:auto;margin: 3px;" src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/Biofuel-Trial-Aerial-3.jpg" alt="">Your Content</div>
+				<div><img src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
+				<div><img src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/switchgrass.jpg" alt="">Your Content</div>
+				<div><img src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/feature_img1-11.jpg" alt="">Your Content</div>
+				<div><img src="http://hostcals.localhost/jacksonlab/wp-content/uploads/sites/91/2015/06/switchgrass.jpg" alt="">Your Content</div>
 				</div>
 			</div><!--END .slider-content -->
 

@@ -30,7 +30,23 @@ body.home{
 				width:100%;
 				padding:0;
 
-				div.slider-content{}
+				div.slider-content{
+					div#jacksonlab-owl-carousel{
+						div.owl-wrapper-outer{
+							div.owl-wrapper{
+								div.owl-item{
+									div{
+										img{
+										display:block;
+										width:100%;
+										height:auto;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 
 				div.non-slider-content{
 					padding:30px;

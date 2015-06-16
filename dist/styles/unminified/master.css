@@ -219,6 +219,10 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
 body.home div#main div#primary div#content {
   width: 100%;
   padding: 0; }
+  body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div img {
+    display: block;
+    width: 100%;
+    height: auto; }
   body.home div#main div#primary div#content div.non-slider-content {
     padding: 30px; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-1 {
