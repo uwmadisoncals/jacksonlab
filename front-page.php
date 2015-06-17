@@ -74,23 +74,36 @@ $GLOBALS['currentloop'] = "0";
 
 							<?php
 							//debug posts 
-							logit($jlSliderQuery->posts,'$jlSliderQuery->posts(): ');
+							//logit($jlSliderQuery->posts,'$jlSliderQuery->posts(): ');
 
 							/* In loop Variables */
+							//$thisID = $jlSliderQuery->post->ID;
+
 							$field_objects = get_field_objects();
-							$jlSlider_title =  get_field_object("slider_title");
-							$jlSlider_excerpt =  get_field_object("slider_excerpt");
+							//$jlSlider_title =  get_field_object("slider_title");
+							//$jlSlider_excerpt =  get_field_object("slider_excerpt");
 							$jsSlider_image = get_field_object("image");
+
+							$jsSlider_post = get_field_object("associated_post");
 
 							$jsSlider_image_url = $jsSlider_image['value']['url'];
 							$jsSlider_image_alt = $jsSlider_image['value']['alt'];
 
+							$jsSlider_post_ID = $jsSlider_post['value']->ID;
+
+							$jlSlider_excerpt = $jsSlider_post['value']->post_excerpt;
+							$jsSlider_post_url = get_post_permalink( $jsSlider_post_ID );
+
 							//debug variables
-							logit($field_objects,'$field_objects: ');
-							logit($jsSlider_image,'$jsSlider_image: ');
-							logit($jlSlider_title,'$jlSlider_title: ');
-							logit($jsSlider_image_url,'$jsSlider_image_url: ');
-							logit($jsSlider_image_alt,'$jsSlider_image_alt: ');
+							logit($jsSlider_post,'$jsSlider_post: ');
+							logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
+							logit($jsSlider_post_url,'$jsSlider_post_url: ');
+							//logit($thisID,'$thisID: ');
+							//logit($field_objects,'$field_objects: ');
+							//logit($jsSlider_image,'$jsSlider_image: ');
+							//logit($jlSlider_title,'$jlSlider_title: ');
+							//logit($jsSlider_image_url,'$jsSlider_image_url: ');
+							//logit($jsSlider_image_alt,'$jsSlider_image_alt: ');
 							//logit($jlSlider_title['value'],'$jlSlider_title value: ');
 
 							?>		
@@ -99,9 +112,10 @@ $GLOBALS['currentloop'] = "0";
 								<div>
 									<img src="<?php echo $jsSlider_image_url; ?>" alt="<?php echo $jsSlider_image_alt; ?>">
 									<div class="text-content">
-										<a href="<?php  ?>"><?php echo $jlSlider_title['value']; ?></a>
-
-										<p><?php echo $jlSlider_excerpt['value']; ?><span><?php  ?></span></p>
+										<div>
+										<a href="<?php echo get_post_permalink($jsSlider_post_ID); ?>"><?php echo get_the_title($jsSlider_post_ID);/*$jlSlider_title['value'];*/ ?></a>
+										</div>
+										<p><?php echo $jlSlider_excerpt; ?><br><span><a href="<?php echo $jsSlider_post_url; ?>">Read More<span class="fa fa-external-link"></span></a></span></p>
 									</div>
 									
 								</div>

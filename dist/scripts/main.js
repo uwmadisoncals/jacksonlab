@@ -2507,7 +2507,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 	$("#jacksonlab-owl-carousel").owlCarousel({
  
-      //autoPlay: 3000, //Set AutoPlay to 3 seconds
+      //autoPlay: 4000, //Set AutoPlay to 3 seconds
       singleItem:true,
 
  

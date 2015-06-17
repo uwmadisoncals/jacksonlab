@@ -49,14 +49,18 @@ body.home{
 										div.text-content{
 											box-sizing:border-box;
 											width:100%;
-											height:20%;
+											height:30%;
 											background-color:black;
 											position:absolute;
 											top:0;
 											left:0;
 											padding:1em;
 											background: rgba(0,0,0,.5);
-											h3{
+
+											div{
+												margin-bottom:0.6em;
+												a{	
+												
 												font-size:2em;
 												font-family: 'Open Sans', sans-serif;
 												color:white;
@@ -65,7 +69,11 @@ body.home{
 												letter-spacing: 1px;
 												-webkit-font-smoothing: antialiased;
 												-moz-osx-font-smoothing: grayscale;
-											}	
+
+												}
+											}
+
+	
 											p{
 												color:white;
 												-webkit-font-smoothing: antialiased;
@@ -73,6 +81,13 @@ body.home{
 												font-weight: 400;
 												opacity:1;
 												font-size:1.4em;
+												margin-bottom:0;
+												span{
+													margin-top:0.5em;
+													span{
+														margin-left:0.4em;
+													}
+												}
 											}
 										}
 									}
