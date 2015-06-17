@@ -31,3 +31,32 @@ function jacksonlab_widgets_init(){
 
 }//END jacksonlab_widgets_init()
 add_action('widgets_init','jacksonlab_widgets_init');
+
+function my_admin_notice(){
+  global $pagenow;
+  global $current_screen;
+
+ 
+  $jsSlider_post = get_field_object("associated_post");
+  $jlSlider_excerpt = $jsSlider_post['value']->post_excerpt;
+  $jlSlider_excerpt_isEmpty = empty($jlSlider_excerpt);
+  $jsSlider_post_ID = $jsSlider_post['value']->ID;
+
+  $editPostUrl = get_edit_post_link($jsSlider_post_ID);
+  $editPostName = get_the_title($jsSlider_post_ID);
+
+  //echo "current screen is : " . $current_screen->post_type;
+  //echo "pagenow is : " . $pagenow;
+  //echo "jlSlider_excerpt is : " . empty($jlSlider_excerpt);
+
+  if($current_screen->post_type === 'jacksonlab-slider' && 'post.php' == $pagenow && $jlSlider_excerpt_isEmpty){
+
+      echo '<div id="message" class="error">
+      <p><strong>WARNING</strong>: The associated post, <a href="' . $editPostUrl . '">' . $editPostName . '</a> , that you selected does not have an excerpt to display!</p>
+    </div>';
+
+  }
+
+
+}
+add_action('admin_notices', 'my_admin_notice');
