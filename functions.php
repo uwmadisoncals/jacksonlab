@@ -72,7 +72,7 @@ function my_admin_notice(){
   //logit($result,'$result');
   //logit($slugs,'$slugs');
   //logit($hasResearch,'$hasResearch');
-  logit($slugs0,'$slugs0');
+  //logit($slugs0,'$slugs0');
 
   //DEBUG
   //echo "current screen is : " . $current_screen->post_type;
