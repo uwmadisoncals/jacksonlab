@@ -32,7 +32,9 @@ $GLOBALS['currentloop'] = "0";
 		<div id="primary">
 
 			<div id="content" role="main">
-			<?php echo "style=\"background-image: url('" . $test . "');\"" ?>
+			<?php// echo "style=\"background-image: url('" . $test . "');\"" ?>
+			<?php //echo "style=\"background-image: url('" . $test . "');background-size:cover;background-position:50% 50%;background-clip:border-box;\""; ?>
+			<?php  //echo get_stylesheet_directory_uri() . "/images/dragonfly.jpg"; ?>
 				<div class="slider-content">
 
 					<div id="jacksonlab-owl-carousel" class="owl-carousel">

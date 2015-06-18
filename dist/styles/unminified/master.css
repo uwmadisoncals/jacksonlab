@@ -2003,7 +2003,14 @@ body.home div#main {
       height: 250px;
       float: left;
       margin: 0;
-      padding: 0; }
+      padding: 1em 1em 1em 0;
+      background-clip: content-box; }
+      body.home div#main div#primary div#content div.non-slider-content article:nth-of-type(3n+1) {
+        padding: 1em; }
+      body.home div#main div#primary div#content div.non-slider-content article:nth-child(-n+3) {
+        padding-bottom: 0; }
+      body.home div#main div#primary div#content div.non-slider-content article header.entry-header h3 {
+        padding: 0; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-1 {
       background-color: red; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-2 {

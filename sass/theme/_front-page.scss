@@ -115,9 +115,19 @@ body.home{
 						height:250px;
 						float:left;
 						margin:0;
-						padding:0;
+						padding:1em 1em 1em 0;
+						background-clip:content-box;
+						&:nth-of-type(3n+1){
+							padding:1em;
+						}
+						&:nth-child(-n+3){
+							padding-bottom:0;
+						}
 						
-						h1.entry-title{
+						header.entry-header{
+							h3{
+								padding:0;
+							}
 						}
 
 					}//END article
