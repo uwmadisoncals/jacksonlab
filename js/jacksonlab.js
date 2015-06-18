@@ -41,7 +41,7 @@
 	    if($('body').is(".page-home")){
 
 	    	//Add clearfix after every third article
-	    	$("article:nth-of-type(3n)").after('<p class=\"cf\"></p>');
+	    	$("article:nth-of-type(3n)").after('<p class=\"cf jlclear\"></p>');
 	    }
 
 	    if($('body').is(".home")){

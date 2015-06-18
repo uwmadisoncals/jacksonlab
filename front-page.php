@@ -26,13 +26,13 @@ $GLOBALS['currentloop'] = "0";
 <?php // if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 1777 );} ?>
 </div>
 -->
-
+<?php $test="thismyTest"; ?>
 	<div id="main">
 
 		<div id="primary">
 
 			<div id="content" role="main">
-
+			<?php echo "style=\"background-image: url('" . $test . "');\"" ?>
 				<div class="slider-content">
 
 					<div id="jacksonlab-owl-carousel" class="owl-carousel">
@@ -144,9 +144,9 @@ $GLOBALS['currentloop'] = "0";
 
 						<?php while ( have_posts() ) : the_post(); ?>
 
-							<?php get_template_part( 'content', 'front_page' ); ?>
+							<?php //get_template_part( 'content', 'front_page' ); ?>
 
-							<?php comments_template( '', true ); ?>
+							<?php //comments_template( '', true ); ?>
 
 						<?php endwhile; // end of the loop. ?>
 

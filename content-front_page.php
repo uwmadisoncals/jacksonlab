@@ -54,8 +54,12 @@ switch( $GLOBALS['currentloop'] ){
 }
 
  ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class($specialClass); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class($specialClass); ?> <?php /*get_template_part('/custom_template_parts/a','z'); */?> >
+	<?php 
+		if ( has_post_thumbnail() ) { 
+		echo get_the_post_thumbnail($post_id, 'thumbnail');
+		}
+	?>
 	<header class="entry-header">
 		<h3 class="entry-title"><?php the_title(); ?></h3>
 		<h3><?php the_category(); ?></h3>

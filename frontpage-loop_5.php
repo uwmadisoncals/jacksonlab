@@ -18,9 +18,7 @@ if($frontpageQuery5->have_posts()) : ?>
 	<?php while ( $frontpageQuery5->have_posts() ) : $frontpageQuery5->the_post(); ?>
 
 		<?php get_template_part( 'content', 'front_page' ); ?>
-
-		<?php comments_template( '', true ); ?>
-
+		
 	<?php endwhile; // end of the loop. ?>
 
 <?php else: ?>

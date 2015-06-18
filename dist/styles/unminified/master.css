@@ -1937,56 +1937,73 @@ body.page-template-template_no_sidebar div#main div#primary div#content {
   width: 100%; }
 
 /**
- * Applies to front-page.php
+ * Applies to front-page.php //
  */
-body.home div#main div#primary div#content {
-  width: 100%;
-  padding: 0;
-  margin-top: 1px;
-  border-top: 5px solid #1d1d1d; }
-  body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div {
-    position: relative; }
-    body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div img {
-      display: block;
+body.home header#branding {
+  padding-bottom: 0; }
+body.home div#main {
+  padding: 0; }
+  body.home div#main div#primary div#content {
+    width: 100%;
+    padding: 0;
+    margin-top: 1px;
+    border-top: 5px solid #1d1d1d; }
+    body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div {
+      position: relative; }
+      body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div img {
+        display: block;
+        width: 100%;
+        height: auto; }
+      body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 100%;
+        height: 30%;
+        background-color: black;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 1em;
+        background: rgba(0, 0, 0, 0.5); }
+        body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div {
+          margin-bottom: 0.6em; }
+          body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div a {
+            font-size: 2em;
+            font-family: 'Open Sans', sans-serif;
+            color: white;
+            opacity: 1;
+            font-weight: 400;
+            letter-spacing: 1px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale; }
+        body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p {
+          color: white;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-weight: 400;
+          opacity: 1;
+          font-size: 1.4em;
+          margin-bottom: 0; }
+          body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p span {
+            margin-top: 0.5em;
+            font-size: 0.95em; }
+            body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p span span {
+              margin-left: 0.4em; }
+    body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-controls.clickable {
       width: 100%;
-      height: auto; }
-    body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content {
+      height: 50px;
+      position: absolute;
+      bottom: 0; }
+    body.home div#main div#primary div#content div.non-slider-content article {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
-      width: 100%;
-      height: 30%;
-      background-color: black;
-      position: absolute;
-      top: 0;
-      left: 0;
-      padding: 1em;
-      background: rgba(0, 0, 0, 0.5); }
-      body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div {
-        margin-bottom: 0.6em; }
-        body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div a {
-          font-size: 2em;
-          font-family: 'Open Sans', sans-serif;
-          color: white;
-          opacity: 1;
-          font-weight: 400;
-          letter-spacing: 1px;
-          -webkit-font-smoothing: antialiased;
-          -moz-osx-font-smoothing: grayscale; }
-      body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p {
-        color: white;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        font-weight: 400;
-        opacity: 1;
-        font-size: 1.4em;
-        margin-bottom: 0; }
-        body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p span {
-          margin-top: 0.5em; }
-          body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content p span span {
-            margin-left: 0.4em; }
-  body.home div#main div#primary div#content div.non-slider-content {
-    padding: 30px; }
+      width: 33.33%;
+      height: 250px;
+      float: left;
+      margin: 0;
+      padding: 0; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-1 {
       background-color: red; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-2 {
@@ -2080,3 +2097,7 @@ body.page-people div#main div#primary div#content {
   margin: -1px;
   padding: 0;
   border: 0; }
+
+.jlclear {
+  margin: 0;
+  padding: 0; }

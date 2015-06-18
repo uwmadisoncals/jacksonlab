@@ -29,8 +29,6 @@ if($frontpageQuery->have_posts()) : ?>
 
 		<?php get_template_part( 'content', 'front_page' ); ?>
 
-		<?php comments_template( '', true ); ?>
-
 	<?php endwhile; // end of the loop. ?>
 
 <?php else: ?>
