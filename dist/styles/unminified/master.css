@@ -2031,6 +2031,58 @@ body.home div#main {
 /**
  * Applies home.php 
  */
+body.blog div#page div.mobileScroll div#main div#primary div#content article {
+  width: 100%;
+  /*height: 225px;*/
+  margin: 5px 5px 15px 5px;
+  padding: 2em;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  background: white;
+  color: #343434;
+  border: 1px solid #b7b7b7;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3); }
+  body.blog div#page div.mobileScroll div#main div#primary div#content article:nth-of-type(1) {
+    margin-top: 20px; }
+  body.blog div#page div.mobileScroll div#main div#primary div#content article header.entry-header h2.entry-title {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin: 0;
+    padding: 0; }
+  body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.featured-image {
+    position: relative;
+    overflow: hidden;
+    width: min-content;
+    width: -moz-min-content;
+    width: -webkit-min-content; }
+    body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.featured-image div.thumb-caption {
+      position: absolute;
+      max-height: 30%;
+      left: 3%;
+      right: 3%;
+      bottom: 1%;
+      color: white;
+      font-size: 1em; }
+      body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.featured-image div.thumb-caption p {
+        overflow: hidden; }
+  body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.main-article-content {
+    margin-top: 1em;
+    font-size: 1.3em;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 1px;
+    font-weight: 500;
+    line-height: 1.7em; }
+    body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.main-article-content.no-featured-image {
+      background-color: pink; }
+  body.blog div#page div.mobileScroll div#main div#primary div#content article footer span.edit-link a:hover {
+    border-bottom-style: none; }
+
 /**
  * Applies to page.php
  */
@@ -2095,7 +2147,7 @@ body.page-people div#main div#primary div#content {
 /**
  * Applies to 404.php.
  */
-.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.blog header#branding hgroup.heading h1#site-title, body.blog header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
+.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.blog div#page header#branding hgroup.heading h1#site-title, body.blog div#page header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

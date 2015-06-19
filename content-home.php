@@ -24,7 +24,7 @@
 			    switch($cat->name){
 
 			    	case "research":
-			    	echo "<h1>Research</h1>";
+			    	//echo "<h1>Research</h1>";
 			    	break;
 
 			    	default:
@@ -38,19 +38,62 @@
 
 		<h2 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
-		<h3 class="post-author"><?php the_author(); ?></h3>
-		<h3 class="post-date"><?php the_time('F j, Y'); ?></h3>
+
+		<?php if(get_the_author_meta("user_login")): ?>
+		
+			<span class="post-author">By: 
+
+				<a href="<?php the_author_link(); ?>"> 
+				<?php
+
+				 if(get_the_author_meta("display_name")){
+				 	echo get_the_author_meta("display_name");
+				 }
+				 elseif(get_the_author_meta("user_login")){
+				 		echo get_the_author_meta("user_login");
+				 }
+				 ?>
+				</a>
+
+			</span>
+
+			<span class="post-date">, <?php echo the_time('F j, Y'); ?></span>
+		<?php  endif; ?>
 		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php 
-		if ( has_post_thumbnail() ) { ?>
+		<?php if(has_post_thumbnail()) : ?>
 
-			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('medium'); ?></a>
+
+		<div class="featured-image" >
+		<?php 
+		$thumnailArgs = array(
+		'alt'	=> trim( strip_tags( $attachment->post_excerpt ) ),
+		'title'	=> trim( strip_tags( $attachment->post_title ) ),
+		);
+
+		$getPost = get_post(); //logit($getPost,'$getPost');
+		$thumbID = get_post( get_post_thumbnail_id() ); //logit($thumbID,'thumbID');
+		$thumbCaption = $thumbID->post_excerpt; //logit($thumbCaption,'$thumbCaption');
+		?>
+
+
+
+			<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail('','medium',$thumbnailArgs); ?></a>
+			<?php if(isset($thumbCaption)) :
+			echo "<div class=\"thumb-caption\"><p>";
+			echo $thumbCaption . "</p></div>";
+			endif;
+			?>
+		</div><!-- END .featured-image -->
+
+		<?php endif; ?>
+
+		<div class="main-article-content">
+		<?php the_content();   ?>
+		</div>
 		
-		<?php } 
-		the_content(); ?>
 
 	<span> Categories: <?php the_category('</span> <span>'); ?> </span>
 	<br>

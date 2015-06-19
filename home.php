@@ -18,14 +18,30 @@ get_header(); ?>
 		
 			<div id="content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+			<?php
+			$args = array(
+				"post_type"=> array("post"),
+				"posts_per_page" => "-1",
+				"orderby" => "date",
+				"category_name"=>"research"
 
-					<?php get_template_part( 'content', 'home' ); ?>
-					
+			);
 
-					<?php comments_template( '', true ); ?>
+			$labNewsQuery = new WP_Query($args);
 
-				<?php endwhile; // end of the loop. ?>
+			?>
+				
+				<?php if(have_posts()) : ?>
+
+					<?php while ( have_posts() ) : the_post(); ?>
+
+						<?php get_template_part( 'content', 'home' ); ?>
+						
+						<?php comments_template( '', true ); ?>
+
+					<?php endwhile; // end of the loop. ?>
+
+				<?php endif;?>
 				
 			</div><!-- #content -->
 			<?php get_sidebar(); ?>

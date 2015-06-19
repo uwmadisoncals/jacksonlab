@@ -2545,7 +2545,26 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    	$("article:nth-of-type(3n)").after('<p class=\"cf jlclear\"></p>');
 	    }
 
-	    if($('body').is(".home")){
+	    //Applies this js to template home.php
+	    if($('body').is(".blog")){
+	    	var childLength = $('article .featured-image').length;
+	    	console.log(childLength);
+
+
+	    	console.log("is in blog");
+
+	    	/*if($('.featured-image').length){
+	    		$(".main-article-content").addClass("no-fenatured-image");
+	    	}*/
+
+	    	/*
+	    	$("article").children('.entry-content').each(function(){
+	    		//console.log($('.main-article-content > .featured-image');
+	    		if($('.main-article-content .featured-image').length){
+	    		console.log($('.main-article-content > .featured-image'));
+	    		}
+	    	}); */
+
 
 	    }
 

@@ -4,20 +4,128 @@
 
 body.blog{
 
-	header#branding{
+	div#page{
+		header#branding{
 
-		hgroup.heading{
+			hgroup.heading{
 
-			h1#site-title{
-			@extend .accessibleHide;
+				h1#site-title{
+				@extend .accessibleHide;
+				}
+
+				h2#site-description{
+				@extend .accessibleHide;
+				}
+
 			}
 
-			h2#site-description{
-			@extend .accessibleHide;
-			}
+		}//END header#branding
 
-		}
+		div.mobileScroll{
 
-	}
+			div#main{
+
+					div#primary{
+
+							div#content{
+
+
+									article{
+									  //background-color: white;
+									  width: 100%;
+									  /*height: 225px;*/
+									  margin: 5px 5px 15px 5px;
+									  padding:2em;
+									  float: left;
+									  overflow: hidden;
+									  position: relative;
+									  background: white;
+									  color: #343434;
+									  border: 1px solid #b7b7b7;
+									  box-sizing: border-box;
+									  -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+									  -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+									  box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+									  &:nth-of-type(1){
+									  	//background-color: pink;
+									  	margin-top:20px;
+									  }
+										header.entry-header{
+											h2.entry-title{
+												font-family:"Open Sans",Helvetica, sans-serif;
+												margin:0;
+												padding:0;
+											}
+										}//END header
+
+										div.entry-content{
+
+											div.featured-image{
+
+												position:relative;
+												overflow:hidden;
+												width:min-content;
+												width:-moz-min-content;
+												width:-webkit-min-content;
+
+												a{
+												  	img{
+
+												  	}//END img
+
+												}//END a
+
+												div.thumb-caption{
+													position:absolute;
+													max-height:30%;
+													left:3%;
+													right:3%;
+													bottom:1%;
+													color:white;
+													font-size:1em;
+													p{
+														overflow:hidden;
+													}
+												}
+
+											}//END .featured-image
+
+											div.main-article-content{
+												margin-top:1em;
+												font-size:1.3em;
+												font-family:"Open Sans",Helvetica, sans-serif;
+												-webkit-font-smoothing: antialiased;
+												-moz-osx-font-smoothing: grayscale;
+												letter-spacing: 1px;
+												font-weight: 500;
+												line-height:1.7em;
+												&.no-featured-image{
+													background-color:pink;
+												}
+											}
+
+										}//END .entry-content
+
+										footer{
+										  	span.edit-link{
+										  		a{
+										  			&:hover{
+										  				border-bottom-style:none;
+										  			}
+										  		}
+										  	}
+										}//END .footer
+
+									}//END article
+
+								}//END #content
+
+						}//END #primary
+
+				}//END div#main
+
+		}//END .mobileScroll
+
+	}//div#page
 	
-}
+}//END body.blog
