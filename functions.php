@@ -32,7 +32,7 @@ function jacksonlab_widgets_init(){
 }//END jacksonlab_widgets_init()
 add_action('widgets_init','jacksonlab_widgets_init');
 
-function my_admin_notice(){
+/*function my_admin_notice(){
   //Global Variables
   global $post;
   global $pagenow;
@@ -101,5 +101,5 @@ function my_admin_notice(){
   }
 
 
-}
+}*/
 add_action('admin_notices', 'my_admin_notice');
