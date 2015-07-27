@@ -36,14 +36,14 @@
 		
 	<div class="imageWrapper">
 
-		<a href="<?php echo get_post_permalink($thisID); ?>" title="login"><img src="<?php echo $photoObj['value']['sizes']['thumbnail']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260"></a>
+		<a href="<?php echo get_post_permalink($thisID); ?>" title="login"><img src="<?php echo $photoObj['value']['sizes']['large']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260"></a>
 		
 	</div><!--END .imageWrapper -->
 
 	<div class="description people-description">
 		<?php echo $descObj['value']; ?>
 	</div>
-	<p>Order: <?php echo $displayOrderObj['value']; ?></p>
+	<p><?php echo $displayOrderObj['value']; ?></p>
 	<div class="cf"></div>
 		
 
