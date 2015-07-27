@@ -28,6 +28,9 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC'
 						);
 
 					//Instantiate new WP Query Object

@@ -14,6 +14,7 @@
 		$profTitleObj = get_field_object("field_5564a41f10eb5");
 		$descObj = get_field_object("field_5564a43b10eb6");
 		$photoObj = get_field_object("field_5564b45d56e40");
+		$displayOrderObj = get_field_object("field_55b68b329e479");
 
 		 //echo $firstNameObj['label']; echo $firstNameObj['value']; 
 		 //echo $lastNameObj['label'];
@@ -42,6 +43,7 @@
 	<div class="description people-description">
 		<?php echo $descObj['value']; ?>
 	</div>
+	<p>Order: <?php echo $displayOrderObj['value']; ?></p>
 	<div class="cf"></div>
 		
 
