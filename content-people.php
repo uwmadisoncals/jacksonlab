@@ -58,10 +58,10 @@
 
 
 
-<?php 
+<?php /*
 logit( $firstNameObj, '$firstNameObj:' ); 
 logit( $lastNameObj, '$lastNameObj:' ); 
 logit( $profTitleObj, '$profTitleObj:' ); 
 logit( $descObj, '$descObj:' );
-logit( $photoObj, '$photoObj:' ); 
+logit( $photoObj, '$photoObj:' ); */
 ?>
