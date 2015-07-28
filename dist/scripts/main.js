@@ -2568,6 +2568,21 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 	    }
 
+	    if($('body').is(".single-people")){
+
+	    	if( $(".imageWrapper > img").length ){
+
+	    	var imageHeight = $(".imageWrapper > img").height(); //get computed height of the image, returns number of pixels without the px unit
+
+	    	//console.log(imageHeight);
+
+	    	$(".people-meta").height(imageHeight);
+
+	    	}
+
+
+	    }
+
 	});
 
 })( jQuery );

@@ -32,7 +32,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content cf">
 		
 	<div class="imageWrapper">
 
@@ -41,9 +41,10 @@
 	</div><!--END .imageWrapper -->
 
 	<div class="description people-description">
-		<?php echo $descObj['value']; ?>
+		<?php //echo $descObj['value']; ?>
+		<?php echo custom_field_excerpt(); ?>
 	</div>
-	<p><?php echo $displayOrderObj['value']; ?></p>
+	
 	<div class="cf"></div>
 		
 
@@ -57,10 +58,10 @@
 
 
 
-<?php /*
+<?php 
 logit( $firstNameObj, '$firstNameObj:' ); 
 logit( $lastNameObj, '$lastNameObj:' ); 
 logit( $profTitleObj, '$profTitleObj:' ); 
 logit( $descObj, '$descObj:' );
-logit( $photoObj, '$photoObj:' ); */
+logit( $photoObj, '$photoObj:' ); 
 ?>

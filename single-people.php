@@ -8,6 +8,23 @@
 
 get_header(); ?>
 
+<?php 
+		$firstNameObj = get_field_object("field_5564a3db10eb3");
+		$lastNameObj = get_field_object("field_5564a3fb10eb4");
+		$profTitleObj = get_field_object("field_5564a41f10eb5");
+		$descObj = get_field_object("field_5564a43b10eb6");
+		$photoObj = get_field_object("field_5564b45d56e40");
+		$displayOrderObj = get_field_object("field_55b68b329e479");
+
+		 //echo $firstNameObj['label']; echo $firstNameObj['value']; 
+		 //echo $lastNameObj['label'];
+		 //echo $profTitleObj['label'];
+		 //echo $descObj['label'];
+		 
+		 $thisID = get_the_ID();
+
+ ?>
+
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 

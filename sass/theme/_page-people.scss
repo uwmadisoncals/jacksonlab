@@ -27,23 +27,33 @@ body.page-people{
 			div#content{
 				width:100%;
 				article{
-					padding-bottom:3em;
+					background-color:$lightGrayBorder;
+					//padding-bottom:3em;
+					margin-bottom:4em;
+					padding-left:1em;
 
-					header{}
+
+					header{
+						//padding-left:2em;
+						padding:1em 0 0 2em;
+					}
 					div.entry-content{
+						//background-color:$lightGrayBorder;
+						padding: 0 2em 2em 2em;
 						div.imageWrapper{
-							background-color:$grayBorder;
+							//background-color:$grayBorder;
 							width:300px;
 							height:300px;
 							display:block;
 							float:left;
-							border-radius:5px;
+							//border-radius:5px;
 							//background-image:url("")
 
 							img{
 								display:block;
-								padding-left:35px;
-								padding-top:35px;
+								//padding-left:35px;
+								//padding-top:35px;
+								width:100%;
 							}
 						}
 						div.description{
@@ -52,13 +62,18 @@ body.page-people{
 							//display: none;
 							float: left;
 							width:60%;
-							margin-left:2em;
-							padding:1em;
+							//margin-left:2em;
+							//padding:1em;
+							padding: 0 1em 1em 1em;
 							font-size:1.2em;
 							line-height:2em;
 							max-height: 300px;
 							height:300px;
 							overflow:hidden;
+
+							a span.meta-nav{
+								display: none;
+							}//END .meta-nav
 
 						}
 					}

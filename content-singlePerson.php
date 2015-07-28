@@ -31,12 +31,17 @@
 
 	<div class="entry-content">
 
-		<div class="imageWrapper">
+		<div class="topSectionWrapper cf">
+			<div class="imageWrapper">
 
-			<img src="<?php echo $photoObj['value']['sizes']['thumbnail']; ?>" alt="#" width="260">
-		
-		</div><!--END .imageWrapper -->
+				<img src="<?php echo $photoObj['value']['sizes']['large']; ?>" alt="#" width="260">
+			
+			</div><!--END .imageWrapper -->
 
+			<div class="people-meta cf">
+				
+			</div>
+		</div><!-- END topSectionWrapper -->
 			<div class="description people-description">
 				<?php echo $descObj['value']; ?>
 			</div>

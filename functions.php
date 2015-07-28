@@ -103,3 +103,25 @@ add_action('widgets_init','jacksonlab_widgets_init');
 
 }*/
 add_action('admin_notices', 'my_admin_notice');
+
+
+function custom_field_excerpt() {
+
+  global $post;
+  $descObj = get_field_object("field_5564a43b10eb6");
+
+  //$text = the_field('field_name');
+  $text = $descObj['value'];
+
+  $acf_maxLength = $descObj['maxlength'];
+
+  if ( '' != $text ) {
+    $text = strip_shortcodes( $text );
+    $text = apply_filters('the_content', $text);
+    $text = str_replace(']]>', ']]>', $text);
+    $excerpt_length = $acf_maxLength; // $acf_maxLength defined in people acf group under description field
+    $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
+    $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
+  }
+  return apply_filters('the_excerpt', $text);
+}

@@ -2094,16 +2094,22 @@ body.blog div#page div.mobileScroll div#main div#primary div#content article {
  */
 body.single-people div#main div#primary div#content {
   width: 100%; }
-  body.single-people div#main div#primary div#content article div.entry-content div.imageWrapper {
-    margin-bottom: 2em;
-    background-color: #f4f5f6;
-    width: 300px;
-    height: 300px;
-    border-radius: 5px; }
-    body.single-people div#main div#primary div#content article div.entry-content div.imageWrapper img {
-      display: block;
-      padding-left: 35px;
-      padding-top: 35px; }
+  body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper {
+    margin-bottom: 2em; }
+    body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper div.imageWrapper {
+      width: 40%;
+      float: left; }
+      body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper div.imageWrapper img {
+        display: block;
+        width: 100%; }
+    body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper div.people-meta {
+      width: 60%;
+      height: 800px;
+      float: left;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 1em; }
   body.single-people div#main div#primary div#content article div.entry-content div.people-description {
     margin-bottom: 2em;
     display: block;
@@ -2111,7 +2117,8 @@ body.single-people div#main div#primary div#content {
     font-size: 1.2em;
     line-height: 2em;
     max-height: 500px;
-    overflow: hidden; }
+    overflow: hidden;
+    float: left; }
 
 /**
  * Applies to page-people.php
@@ -2119,30 +2126,34 @@ body.single-people div#main div#primary div#content {
 body.page-people div#main div#primary div#content {
   width: 100%; }
   body.page-people div#main div#primary div#content article {
-    padding-bottom: 3em; }
-    body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper {
-      background-color: #d8dcdf;
-      width: 300px;
-      height: 300px;
-      display: block;
-      float: left;
-      border-radius: 5px; }
-      body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper img {
+    background-color: #f4f5f6;
+    margin-bottom: 4em;
+    padding-left: 1em; }
+    body.page-people div#main div#primary div#content article header {
+      padding: 1em 0 0 2em; }
+    body.page-people div#main div#primary div#content article div.entry-content {
+      padding: 0 2em 2em 2em; }
+      body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper {
+        width: 300px;
+        height: 300px;
         display: block;
-        padding-left: 35px;
-        padding-top: 35px; }
-    body.page-people div#main div#primary div#content article div.entry-content div.description {
-      background-color: #f4f5f6;
-      display: none;
-      float: left;
-      width: 60%;
-      margin-left: 2em;
-      padding: 1em;
-      font-size: 1.2em;
-      line-height: 2em;
-      max-height: 300px;
-      height: 300px;
-      overflow: hidden; }
+        float: left; }
+        body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper img {
+          display: block;
+          width: 100%; }
+      body.page-people div#main div#primary div#content article div.entry-content div.description {
+        background-color: #f4f5f6;
+        display: block;
+        float: left;
+        width: 60%;
+        padding: 0 1em 1em 1em;
+        font-size: 1.2em;
+        line-height: 2em;
+        max-height: 300px;
+        height: 300px;
+        overflow: hidden; }
+        body.page-people div#main div#primary div#content article div.entry-content div.description a span.meta-nav {
+          display: none; }
 
 /**
  * Applies to 404.php.
