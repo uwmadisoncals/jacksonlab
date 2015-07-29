@@ -106,7 +106,7 @@ function my_admin_notice(){
 add_action('admin_notices', 'my_admin_notice');
 */
 
-/*
+
 function custom_field_excerpt() {
 
   global $post;
@@ -127,4 +127,3 @@ function custom_field_excerpt() {
   }
   return apply_filters('the_excerpt', $text);
 }
-*/
