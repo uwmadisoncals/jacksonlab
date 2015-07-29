@@ -7,7 +7,8 @@ $defaultImagePath = get_stylesheet_directory_uri() . "/images/dragonfly.jpg";
 
 if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
 	$thumbID = get_post_thumbnail_id();
-	$thumbURL = wp_get_attachment_image_src($thumbID)[0];
+	$thumbURL = wp_get_attachment_image_src($thumbID);
+	$thumbURL_0 = $thumbURL[0];
 } 
 
 if(!is_null($thumbURL)){
