@@ -41,7 +41,7 @@
 	</div><!--END .imageWrapper -->
 
 	<div class="description people-description">
-		<?php //echo $descObj['value']; ?>
+		<?php echo $descObj['value']; ?>
 		<?php //echo custom_field_excerpt(); ?>
 	</div>
 	
