@@ -13,190 +13,29 @@
 
 get_header(); ?>
 
-<?php 
-$GLOBALS['currentloop'] = "0";
- ?>
-
-
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 
-<!--
-<div class="collegeFeature2">
-<?php // if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 1777 );} ?>
-</div>
--->
-<?php $test="thismyTest"; ?>
 	<div id="main">
 
 		<div id="primary">
-
-			<div id="content" role="main">
-			<?php// echo "style=\"background-image: url('" . $test . "');\"" ?>
-			<?php //echo "style=\"background-image: url('" . $test . "');background-size:cover;background-position:50% 50%;background-clip:border-box;\""; ?>
-			<?php  //echo get_stylesheet_directory_uri() . "/images/dragonfly.jpg"; ?>
-				<div class="slider-content">
-
-					<div id="jacksonlab-owl-carousel" class="owl-carousel">
-
-						<?php
-
-						/* Pre Loop Variables */
-
-						//WP_Query Args
-						$jlSliderArgs = array(
-						"post_type"=> array("jacksonlab-slider","post"),
-						"posts_per_page" => "-1",
-						//"category__in"=> array(25), //categories, 34:jacksonlab-slide-research , 25:research
-						//"meta_key" =>"jacksonlab-slides-category-field",
-						//"meta_value"=>"research"
-						"tax_query"=> array(
-							"relation"=> "OR",
-							array(
-							"taxonomy" => "jacksonlab-slides-category",
-							"field" => "slug",
-							"terms" => array("research")
-							),
-							array(
-							"taxonomy" => "category",
-							"field" => "slug",
-							"terms"=>array("research")
-							)
-						)
-	
-
-						);
-						//New WP_Query
-						$jlSliderQuery = new WP_Query($jlSliderArgs) ;//
-
-						//Start jacksonlab slider loop
-						if($jlSliderQuery->have_posts()) : ?>
-
-							<?php while ( $jlSliderQuery->have_posts() ) : $jlSliderQuery->the_post(); ?>
-
-							<?php
-							//debug posts 
-							//logit($jlSliderQuery->posts,'$jlSliderQuery->posts(): ');
-
-							/* In loop Variables */
-							//$thisID = $jlSliderQuery->post->ID;
-
-							$field_objects = get_field_objects();
-							//$jlSlider_title =  get_field_object("slider_title");
-							//$jlSlider_excerpt =  get_field_object("slider_excerpt");
-							$jsSlider_image = get_field_object("image");
-
-							$jsSlider_post = get_field_object("associated_post");
-
-							$jsSlider_image_url = $jsSlider_image['value']['url'];
-							$jsSlider_image_alt = $jsSlider_image['value']['alt'];
-
-							$jsSlider_post_ID = $jsSlider_post['value']->ID;
-
-							$jlSlider_excerpt = $jsSlider_post['value']->post_excerpt;
-							$jsSlider_post_url = get_post_permalink( $jsSlider_post_ID );
-
-							//debug variables
-							//logit($jsSlider_post,'$jsSlider_post: ');
-							//logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
-							//logit($jsSlider_post_url,'$jsSlider_post_url: ');
-							//logit($thisID,'$thisID: ');
-							//logit($field_objects,'$field_objects: ');
-							//logit($jsSlider_image,'$jsSlider_image: ');
-							//logit($jlSlider_title,'$jlSlider_title: ');
-							//logit($jsSlider_image_url,'$jsSlider_image_url: ');
-							//logit($jsSlider_image_alt,'$jsSlider_image_alt: ');
-							//logit($jlSlider_title['value'],'$jlSlider_title value: ');
-
-							?>		
-
-								<?php if ( 'jacksonlab-slider' == get_post_type() ) : ?>
-								<div>
-									<img src="<?php echo $jsSlider_image_url; ?>" alt="<?php echo $jsSlider_image_alt; ?>">
-									<div class="text-content">
-										<div>
-										<a href="<?php echo get_post_permalink($jsSlider_post_ID); ?>"><?php echo get_the_title($jsSlider_post_ID);/*$jlSlider_title['value'];*/ ?></a>
-										</div>
-										<p><?php echo $jlSlider_excerpt; ?><br><span><a href="<?php echo $jsSlider_post_url; ?>">Read More<span class="fa fa-external-link"></span></a></span></p>
-									</div>
-									
-								</div>
-								<?php endif; ?>
-
-							<?php endwhile; // end of the loop. ?>
-
-						<?php else: ?>
-							<p>sorry no posts found from jlSliderQuery</p>
-
-						<?php endif; ?>
-						<!-- End jacksonlab slider loop -->
-
-					</div><!-- END #jacksonlab-owl-carousel -->
-
-				</div><!--END .slider-content -->
-
-
-				<div class="non-slider-content">
-
-
-					<!-- Start The default Loop -->
-					<?php
-
-					if(have_posts()) : ?>
-
-						<?php while ( have_posts() ) : the_post(); ?>
-
-							<?php //get_template_part( 'content', 'front_page' ); ?>
-
-							<?php //comments_template( '', true ); ?>
-
-						<?php endwhile; // end of the loop. ?>
-
-					<?php else: ?>
-						<p>sorry no posts found from default query</p>
-
-					<?php endif; ?>
-					<!-- End The default Loop -->
-					
-
-					<!-- Include Custom Loop 1 0f 8, cat "forages" (26) -->
-					<?php get_template_part('frontpage','loop_1' ); ?>
-
-					<!-- Include Custom Loop 2 0f 8, cat "science of agroecology" (27) -->
-					<?php //get_template_part('frontpage','loop_2' ); ?>
-
-					<!-- Include Custom Loop 3 0f 8, cat "carbon" (28) -->
-					<?php get_template_part('frontpage','loop_3' ); ?>
-
-					<!-- Include Custom Loop 4 0f 8, cat "cropping" (29) -->
-					<?php get_template_part('frontpage','loop_4' ); ?>
 		
-					<!-- Include Custom Loop 5 0f 8, cat "pasture agroecosystems" (30) -->
-					<?php get_template_part('frontpage','loop_5' ); ?>
-					
-					<!-- Include Custom Loop 6 0f 8, cat "grasses" (31) -->
-					<?php get_template_part('frontpage','loop_6' ); ?>
+			<div id="content" role="main">
 
-					<!-- Include Custom Loop 7 0f 8, cat "agriculture Ecosystems" (32) -->
-					<?php //get_template_part('frontpage','loop_7' ); ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-					<!-- Include Custom Loop 8 0f 8, cat "icelandic" (33) -->
-					<?php  get_template_part('frontpage','loop_8' ); ?>
-					
+					<?php get_template_part( 'content', 'page' ); ?>
 
-					<!-- restore global $post to default loop after all custom WP_Queries -->
-					<?php wp_reset_postdata(); ?>
+					<?php comments_template( '', true ); ?>
 
-				</div><!--END .non-slider-content -->
-
+				<?php endwhile; // end of the loop. ?>
+				
 			</div><!-- #content -->
-
+			<?php get_sidebar(); ?>
 			<div class="clear"></div>
-
 		</div><!-- #primary -->
 
-	</div><!-- END #main -->
-
+	</div>
 <?php get_footer(); ?>
 
-</div><!-- END .mobileScroll -->
+</div>
