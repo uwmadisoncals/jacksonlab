@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
  * The template for displaying all pages.
  *
@@ -22,6 +22,17 @@ get_header(); ?>
 		
 			<div id="content" role="main">
 
+				<div class="slider-content">
+
+				<div id="jacksonlab-owl-carousel" class="owl-carousel">
+				</div><!-- END #jacksonlab-owl-carousel.owl-carousel
+					
+				</div><!--END .slider-content -->
+
+				<div class="non-slider-content">
+					
+				
+
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php get_template_part( 'content', 'front_page' ); ?>
@@ -29,10 +40,15 @@ get_header(); ?>
 					<?php comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
-				
+
+				</div><!-- END .non-slider-content -->
+
 			</div><!-- #content -->
+
 			<?php //get_sidebar(); ?>
+
 			<div class="clear"></div>
+
 		</div><!-- #primary -->
 
 	</div>
