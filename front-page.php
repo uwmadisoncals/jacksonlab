@@ -126,9 +126,9 @@ get_header(); ?>
 				<div class="non-slider-content">
 
 				<div class="row" id="row1">
-					<div class="JL_featured" id="box1"></div>
-					<div class="JL_featured" id="box2"></div>
-					<div class="JL_featured" id="box3"></div>
+					<div class="JL_featured_wrap span-33" id="box1"></div>
+					<div class="JL_featured_wrap span-33" id="box2"></div>
+					<div class="JL_featured_wrap span-33" id="box3"></div>
 				</div>
 
 				<div class="row" id="middle-section">
@@ -136,9 +136,9 @@ get_header(); ?>
 				</div><!-- #middle-section -->
 
 				<div class="row" id="row2">
-					<div class="JL_featured" id="box1"></div>
-					<div class="JL_featured" id="box2"></div>
-					<div class="JL_featured" id="box3"></div>
+					<div class="JL_featured_wrap span-33" id="box1"></div>
+					<div class="JL_featured_wrap span-33" id="box2"></div>
+					<div class="JL_featured_wrap span-33" id="box3"></div>
 				</div>
 					
 				
