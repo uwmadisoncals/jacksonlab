@@ -1,4 +1,4 @@
-	<?php
+<?php
 /**
  * The template for displaying all pages.
  *
@@ -13,15 +13,28 @@
 
 get_header(); ?>
 
+<?php 
+$GLOBALS['currentloop'] = "0";
+ ?>
+
+
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 
+<!--
+<div class="collegeFeature2">
+<?php // if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 1777 );} ?>
+</div>
+-->
+<?php $test="thismyTest"; ?>
 	<div id="main">
 
 		<div id="primary">
-		
-			<div id="content" role="main">
 
+			<div id="content" role="main">
+			<?php// echo "style=\"background-image: url('" . $test . "');\"" ?>
+			<?php //echo "style=\"background-image: url('" . $test . "');background-size:cover;background-position:50% 50%;background-clip:border-box;\""; ?>
+			<?php  //echo get_stylesheet_directory_uri() . "/images/dragonfly.jpg"; ?>
 				<div class="slider-content">
 
 					<div id="jacksonlab-owl-carousel" class="owl-carousel">
@@ -120,48 +133,70 @@ get_header(); ?>
 
 					</div><!-- END #jacksonlab-owl-carousel -->
 
-					
 				</div><!--END .slider-content -->
+
 
 				<div class="non-slider-content">
 
-				<div class="row" id="row1">
-					<div class="JL_featured_wrap span-33" id="box1"></div>
-					<div class="JL_featured_wrap span-33" id="box2"></div>
-					<div class="JL_featured_wrap span-33" id="box3"></div>
-				</div>
 
-				<div class="row" id="middle-section">
+					<!-- Start The default Loop -->
+					<?php
+
+					if(have_posts()) : ?>
+
+						<?php while ( have_posts() ) : the_post(); ?>
+
+							<?php //get_template_part( 'content', 'front_page' ); ?>
+
+							<?php //comments_template( '', true ); ?>
+
+						<?php endwhile; // end of the loop. ?>
+
+					<?php else: ?>
+						<p>sorry no posts found from default query</p>
+
+					<?php endif; ?>
+					<!-- End The default Loop -->
 					
-				</div><!-- #middle-section -->
 
-				<div class="row" id="row2">
-					<div class="JL_featured_wrap span-33" id="box1"></div>
-					<div class="JL_featured_wrap span-33" id="box2"></div>
-					<div class="JL_featured_wrap span-33" id="box3"></div>
-				</div>
+					<!-- Include Custom Loop 1 0f 8, cat "forages" (26) -->
+					<?php get_template_part('frontpage','loop_1' ); ?>
+
+					<!-- Include Custom Loop 2 0f 8, cat "science of agroecology" (27) -->
+					<?php //get_template_part('frontpage','loop_2' ); ?>
+
+					<!-- Include Custom Loop 3 0f 8, cat "carbon" (28) -->
+					<?php get_template_part('frontpage','loop_3' ); ?>
+
+					<!-- Include Custom Loop 4 0f 8, cat "cropping" (29) -->
+					<?php get_template_part('frontpage','loop_4' ); ?>
+		
+					<!-- Include Custom Loop 5 0f 8, cat "pasture agroecosystems" (30) -->
+					<?php get_template_part('frontpage','loop_5' ); ?>
 					
-				
+					<!-- Include Custom Loop 6 0f 8, cat "grasses" (31) -->
+					<?php get_template_part('frontpage','loop_6' ); ?>
 
-				<?php while ( have_posts() ) : the_post(); ?>
+					<!-- Include Custom Loop 7 0f 8, cat "agriculture Ecosystems" (32) -->
+					<?php //get_template_part('frontpage','loop_7' ); ?>
 
-					<?php get_template_part( 'content', 'front_page' ); ?>
+					<!-- Include Custom Loop 8 0f 8, cat "icelandic" (33) -->
+					<?php  get_template_part('frontpage','loop_8' ); ?>
+					
 
-					<?php comments_template( '', true ); ?>
+					<!-- restore global $post to default loop after all custom WP_Queries -->
+					<?php wp_reset_postdata(); ?>
 
-				<?php endwhile; // end of the loop. ?>
-
-				</div><!-- END .non-slider-content -->
+				</div><!--END .non-slider-content -->
 
 			</div><!-- #content -->
-
-			<?php //get_sidebar(); ?>
 
 			<div class="clear"></div>
 
 		</div><!-- #primary -->
 
-	</div>
+	</div><!-- END #main -->
+
 <?php get_footer(); ?>
 
-</div>
+</div><!-- END .mobileScroll -->

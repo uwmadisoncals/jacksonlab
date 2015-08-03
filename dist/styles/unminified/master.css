@@ -1925,7 +1925,7 @@ http://www.fossildraw.com/draw.php?currow=6&curcol=2&font=3&grid=off&cellh=6&cel
   width: 75%; }
 .row .span-33 {
   float: left;
-  width: 33%; }
+  width: 33.333%; }
 .row .span-66 {
   float: left;
   width: 66%; }
@@ -2027,6 +2027,31 @@ body.home div#main {
       background-color: cyan; }
     body.home div#main div#primary div#content div.non-slider-content article.loop-8 {
       background-color: tan; }
+
+body.home header#branding {
+  padding-bottom: 0; }
+body.home div#main div#primary div#content div.non-slider-content .row {
+  width: 100%;
+  height: 300px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  body.home div#main div#primary div#content div.non-slider-content .row#row1 {
+    background-color: pink; }
+  body.home div#main div#primary div#content div.non-slider-content .row#row2 {
+    background-color: cyan; }
+  body.home div#main div#primary div#content div.non-slider-content .row#middle-section {
+    height: 150px;
+    background-color: gray; }
+  body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: black url("http://hc.localhost/jacksonlab/wp-content/uploads/sites/91/2015/07/dragonfly.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: inherit;
+    padding: 1.5em; }
 
 /**
  * Applies home.php 
@@ -2155,7 +2180,7 @@ body.page-people div#main div#primary div#content {
 /**
  * Applies to 404.php.
  */
-.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.blog div#page header#branding hgroup.heading h1#site-title, body.blog div#page header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
+.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.blog div#page header#branding hgroup.heading h1#site-title, body.blog div#page header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

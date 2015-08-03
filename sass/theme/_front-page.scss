@@ -179,3 +179,82 @@ body.home{
 	
 
 }//END body.home
+
+
+
+//****
+//OVERRIDES for branch alt-frontpage
+
+body.home{
+
+	header#branding{
+		padding-bottom:0;
+
+		hgroup.heading{
+
+			h1#site-title{
+			@extend .accessibleHide;
+			}
+
+			h2#site-description{
+			@extend .accessibleHide;
+			}
+
+		}
+
+	}//END header#branding
+
+
+
+	div#main{
+
+		div#primary{
+
+			div#content{
+
+				div.slider-content{
+
+				}//END .slider-content
+
+				div.non-slider-content{
+					.row{
+						width:100%;
+						height: 300px;
+						box-sizing:border-box;
+
+						&#row1{
+						background-color:pink;
+						}
+
+						&#row2{
+						background-color:cyan;
+						}
+
+						&#middle-section{
+							height: 150px;
+							background-color: gray;
+						}
+
+						.JL_featured_wrap{
+							box-sizing:border-box;
+							background:black url("http://hc.localhost/jacksonlab/wp-content/uploads/sites/91/2015/07/dragonfly.jpg"); //TODO move styles inline php with template-tag
+							background-size:cover;//TODO
+							background-position:center center;//Todo
+							height:inherit;
+							padding:1.5em;
+
+						}//END .JL_featured_wrap
+
+					}//END .row
+
+				}//END div.non-slider-content
+
+			}//END div#content
+
+		}//END #primary
+
+	}//END div#main
+
+	
+
+}//END body.home
