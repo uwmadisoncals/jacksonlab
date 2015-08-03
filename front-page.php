@@ -118,44 +118,75 @@ get_header(); ?>
 						<?php endif; 
 						wp_reset_postdata(); //reset loop and prepare for next custom loop
 						?>
-						<!-- End jacksonlab slider loop -->
+						<!-- End jacksonlab slider loop : $jlSliderQuery -->
 
 					</div><!-- END #jacksonlab-owl-carousel -->
 
 					
 				</div><!--END .slider-content -->
 
-				<?php $mod = get_theme_mod( 'jacksonlab_options_id' ); ?>
 
-				<div class="non-slider-content">
 
-				<div class="row" id="row1">
-					<div class="JL_featured_wrap span-33" id="box1"></div>
-					<div class="JL_featured_wrap span-33" id="box2"></div>
-					<div class="JL_featured_wrap span-33" id="box3"></div>
-				</div>
+				<?php
 
-				<div class="row" id="middle-section">
-					
-				</div><!-- #middle-section -->
+				 $mod = get_theme_mod( 'jacksonlab_options_id' ); 
 
-				<div class="row" id="row2">
-					<div class="JL_featured_wrap span-33" id="box1"></div>
-					<div class="JL_featured_wrap span-33" id="box2"></div>
-					<div class="JL_featured_wrap span-33" id="box3"></div>
-				</div>
-					
-				
+				 $the_query = new WP_Query($the_query_args);
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				 $the_query_args = array();
 
-					<?php get_template_part( 'content', 'front_page' ); ?>
+				 if($the_query->have_posts()) :
+				 	while($the_query->have_posts() ) :$the_query->the_post(); ?>
 
-					<?php comments_template( '', true ); ?>
+						<div class="non-slider-content">
 
-				<?php endwhile; // end of the loop. ?>
+						<div class="row" id="row1">
+							<div class="JL_featured_wrap span-33" id="box1"></div>
+							<div class="JL_featured_wrap span-33" id="box2"></div>
+							<div class="JL_featured_wrap span-33" id="box3"></div>
+						</div>
 
-				</div><!-- END .non-slider-content -->
+						<div class="row" id="middle-section">
+							
+						</div><!-- #middle-section -->
+
+						<div class="row" id="row2">
+							<div class="JL_featured_wrap span-33" id="box1"></div>
+							<div class="JL_featured_wrap span-33" id="box2"></div>
+							<div class="JL_featured_wrap span-33" id="box3"></div>
+						</div>
+
+						</div><!-- END .non-slider-content -->
+
+				 	<?php endwhile; ?>
+				 	
+				 	<?php else :  ?>
+				 		<!--  do stuff if not $the_query->have_posts() -->
+				 		<p>Sorry, no posts matched your criteria.</p>
+
+				 		<div class="non-slider-content">
+
+						<div class="row" id="row1">
+							<div class="JL_featured_wrap span-33" id="box1"></div>
+							<div class="JL_featured_wrap span-33" id="box2"></div>
+							<div class="JL_featured_wrap span-33" id="box3"></div>
+						</div>
+
+						<div class="row" id="middle-section">
+							
+						</div><!-- #middle-section -->
+
+						<div class="row" id="row2">
+							<div class="JL_featured_wrap span-33" id="box1"></div>
+							<div class="JL_featured_wrap span-33" id="box2"></div>
+							<div class="JL_featured_wrap span-33" id="box3"></div>
+						</div>
+
+						</div><!-- END .non-slider-content -->
+
+				 	<?php endif; ?>
+
+
 
 			</div><!-- #content -->
 
