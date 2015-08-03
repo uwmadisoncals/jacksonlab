@@ -2162,10 +2162,36 @@ body.page-people div#main div#primary div#content {
         width: 300px;
         height: 300px;
         display: block;
-        float: left; }
+        float: left;
+        margin-bottom: 30px; }
         body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper img {
           display: block;
           width: 100%; }
+        body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper div.readmore {
+          width: 100%;
+          height: 2em;
+          background-color: #f4f5f6;
+          margin: 0 auto;
+          padding: 6px 0 6px 0;
+          border: 0; }
+          body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper div.readmore a.readmoreLink {
+            display: block;
+            width: 98%;
+            height: 2em;
+            margin: 0;
+            padding: 0;
+            border: 0; }
+            body.page-people div#main div#primary div#content article div.entry-content div.imageWrapper div.readmore a.readmoreLink p {
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-rendering: optimizelegibility;
+              text-align: center;
+              color: #d68a28;
+              font-size: 18px;
+              font-weight: 600;
+              margin: 0;
+              padding: 0;
+              border: 0; }
       body.page-people div#main div#primary div#content article div.entry-content div.description {
         background-color: #f4f5f6;
         display: block;

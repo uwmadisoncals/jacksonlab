@@ -1,0 +1,6 @@
+// use antialiasing with vendor prefixes. use @include fontAntialiasing
+@mixin fontAntialiasing{
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+text-rendering: optimizelegibility;
+}
