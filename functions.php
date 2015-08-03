@@ -139,13 +139,14 @@ $wp_customize->add_section( 'jacksonlab-home-options' , array(
       'description'=>'Choose posts/pages to be displayed on frontpage'
   ) ); 
 
+//Setting for area1
 $wp_customize->add_setting('jacksonlab_options_id', array(
       'capability' =>'edit_theme_options', 
       'type'=> 'theme_mod'
  
 ));
 
- 
+//Control for area1
 $wp_customize->add_control('jacksonlab_options_id', array(
       'label'=>'area1',
       'section'=>'jacksonlab-home-options',
@@ -155,6 +156,90 @@ $wp_customize->add_control('jacksonlab_options_id', array(
 
 ));
    
+//Setting for area2
+$wp_customize->add_setting('jacksonlab_options_id_2', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+//Control for area2
+$wp_customize->add_control('jacksonlab_options_id_2', array(
+      'label'=>'area2',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
+
+//Setting for area3
+$wp_customize->add_setting('jacksonlab_options_id_3', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+//Control for area3
+$wp_customize->add_control('jacksonlab_options_id_3', array(
+      'label'=>'area3',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
+
+//Setting for area4
+$wp_customize->add_setting('jacksonlab_options_id_4', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+//Control for area4
+$wp_customize->add_control('jacksonlab_options_id_4', array(
+      'label'=>'area4',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
+
+//Setting for area5
+$wp_customize->add_setting('jacksonlab_options_id_5', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+//Control for area5
+$wp_customize->add_control('jacksonlab_options_id_5', array(
+      'label'=>'area5',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
+
+//Setting for area6
+$wp_customize->add_setting('jacksonlab_options_id_6', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+//Control for area6
+$wp_customize->add_control('jacksonlab_options_id_6', array(
+      'label'=>'area6',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
 
 }
 add_action( 'customize_register', 'jacksonlab_customize_register' );
