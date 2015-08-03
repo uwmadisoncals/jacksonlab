@@ -115,13 +115,17 @@ get_header(); ?>
 						<?php else: ?>
 							<p>sorry no posts found from jlSliderQuery</p>
 
-						<?php endif; ?>
+						<?php endif; 
+						wp_reset_postdata(); //reset loop and prepare for next custom loop
+						?>
 						<!-- End jacksonlab slider loop -->
 
 					</div><!-- END #jacksonlab-owl-carousel -->
 
 					
 				</div><!--END .slider-content -->
+
+				<?php $mod = get_theme_mod( 'jacksonlab_options_id' ); ?>
 
 				<div class="non-slider-content">
 
