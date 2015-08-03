@@ -129,4 +129,34 @@ function custom_field_excerpt() {
   return apply_filters('the_excerpt', $text);
 }
 
+/**** Adding Theme Customizer Options ****/
+function jacksonlab_customize_register($wp_customize) {
+   //All our sections, settings, and controls will be added here
+   
+$wp_customize->add_section( 'jacksonlab-home-options' , array(
+      'title' =>'Home Page Features',
+      'priority'=>65,
+      'description'=>'Choose posts/pages to be displayed on frontpage'
+  ) ); 
+
+$wp_customize->add_setting('jacksonlab_options_id', array(
+      'capability' =>'edit_theme_options', 
+      'type'=> 'theme_mod'
+ 
+));
+
+ 
+$wp_customize->add_control('jacksonlab_options_id', array(
+      'label'=>'area1',
+      'section'=>'jacksonlab-home-options',
+      'type'=>'dropdown-pages',
+      'priority'=>'0',//In section
+      'settings'=>'jacksonlab_options_id'
+
+));
+   
+
+}
+add_action( 'customize_register', 'jacksonlab_customize_register' );
+
 
