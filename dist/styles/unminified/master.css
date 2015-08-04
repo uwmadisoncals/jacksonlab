@@ -2030,28 +2030,46 @@ body.home div#main {
 
 body.home header#branding {
   padding-bottom: 0; }
-body.home div#main div#primary div#content div.non-slider-content .row {
-  width: 100%;
-  height: 300px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-  body.home div#main div#primary div#content div.non-slider-content .row#row1 {
-    background-color: pink; }
-  body.home div#main div#primary div#content div.non-slider-content .row#row2 {
-    background-color: cyan; }
-  body.home div#main div#primary div#content div.non-slider-content .row#middle-section {
-    height: 150px;
-    background-color: gray; }
-  body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap {
+body.home div#main div#primary div#content {
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); }
+  body.home div#main div#primary div#content div.non-slider-content .row {
+    width: 100%;
+    height: 300px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    background: black url("http://hc.localhost/jacksonlab/wp-content/uploads/sites/91/2015/07/dragonfly.jpg");
-    background-size: cover;
-    background-position: center center;
-    height: inherit;
-    padding: 1.5em; }
+    box-sizing: border-box; }
+    body.home div#main div#primary div#content div.non-slider-content .row#row1 {
+      background-color: transparent; }
+    body.home div#main div#primary div#content div.non-slider-content .row#row2 {
+      background-color: transparent; }
+    body.home div#main div#primary div#content div.non-slider-content .row#middle-section {
+      height: 150px;
+      background-color: gray; }
+    body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizelegibility;
+      font-family: "Open Sans", sans-serif;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      height: inherit;
+      padding: 1.5em;
+      position: relative; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrap {
+        overflow: hidden; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap h2 {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizelegibility;
+        font-family: "Open Sans", sans-serif;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        display: block;
+        font-size: 18px;
+        color: #222222; }
 
 /**
  * Applies home.php 

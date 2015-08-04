@@ -2542,18 +2542,27 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    if($('body').is(".page-home")){
 
 	    	//Generate dimensions vals for slider elements
-	    	var owlItemHeight = $('.owl-item').height();
-
-	    	console.log(owlItemHeight);
- 
-	    	$(".text-content").height(owlItemHeight);
-
-	    	$(".owl-item div img").css({"max-height":owlItemHeight});
-
+	    	var owlItemHeight = $('.owl-item').height(); //get .owl-item height
+	    	//console.log(owlItemHeight);
+ 			$(".text-content").height(owlItemHeight); //give .text-content height of owlItemHeight
+			$(".owl-item div img").css({"max-height":owlItemHeight});
 	    	var SliderImgHeight = $(".owl-item div img").height();
 	    	var SliderImgWidth = $(".owl-item div img").width();
+	    	//console.log("image height:"+ SliderImgHeight +". image Width: "+ SliderImgWidth+".");
 
-	    	console.log("image height:"+ SliderImgHeight +". image Width: "+ SliderImgWidth+".");
+	    	//Generate dimension vals for .JL_featured_wrap img
+	    	var JL_featured_wrap_hght = $('.JL_featured_wrap').height();//height of .JL_featured_wrap
+	    	var JL_featured_wrap_width = $('.JL_featured_wrap').width(); //width of .JL_featured_wrap, not including padding
+	    	var JL_featured_wrap_w_less = JL_featured_wrap_width *.9; //compute 90% of JL_featured_wrap_width
+
+	    	//console.log("JL_featured_wrap_hght: "+JL_featured_wrap_hght);
+	    	console.log("JL_featured_wrap_width: "+JL_featured_wrap_width);
+	    	console.log("JL_featured_wrap_w_less: "+JL_featured_wrap_w_less);
+
+
+	    	$(".JL_featured_wrap > h2").css({"max-width":JL_featured_wrap_w_less});
+
+	    	$(".imgWrap").css({"max-height":JL_featured_wrap_hght});
 
 	    	//Add clearfix after every third article
 	    	$("article:nth-of-type(3n)").after('<p class=\"cf jlclear\"></p>');

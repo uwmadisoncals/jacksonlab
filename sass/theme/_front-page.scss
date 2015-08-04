@@ -212,23 +212,27 @@ body.home{
 		div#primary{
 
 			div#content{
+				//background-color:transparent;
+				 box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3); //box-shadow: none;
+				//border:none;
 
 				div.slider-content{
 
 				}//END .slider-content
 
 				div.non-slider-content{
+
 					.row{
 						width:100%;
 						height: 300px;
 						box-sizing:border-box;
 
 						&#row1{
-						background-color:pink;
+						background-color:transparent;
 						}
 
 						&#row2{
-						background-color:cyan;
+						background-color:transparent;
 						}
 
 						&#middle-section{
@@ -237,12 +241,32 @@ body.home{
 						}
 
 						.JL_featured_wrap{
+							@include fontAntialiasing;
+							font-family: "Open Sans",sans-serif;
+
 							box-sizing:border-box;
-							background:black url("http://hc.localhost/jacksonlab/wp-content/uploads/sites/91/2015/07/dragonfly.jpg"); //TODO move styles inline php with template-tag
-							background-size:cover;//TODO
-							background-position:center center;//Todo
+							//background:black url("http://hc.localhost/jacksonlab/wp-content/uploads/sites/91/2015/07/dragonfly.jpg"); //TODO move styles inline php with template-tag
+							//background-size:cover;//TODO
+							//background-position:center center;//Todo
 							height:inherit;
 							padding:1.5em;
+							position:relative;
+
+							div.imgWrap{
+							overflow: hidden;
+							}//END .imgWrap
+
+							h2{
+								@include fontAntialiasing;
+								font-family: "Open Sans",sans-serif;
+								position:absolute;
+								top:30px;
+								left:30px;
+								display:block;
+								font-size:18px;
+								color:#222222;
+								//color:#F7EEDF;
+							}
 
 						}//END .JL_featured_wrap
 

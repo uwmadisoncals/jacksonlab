@@ -132,7 +132,7 @@ get_header(); ?>
 
 				
 
-						<div class="non-slider-content">
+						<div class="non-slider-content" style="background-image:url('<?php echo get_stylesheet_directory_uri() ."/images/digitalbg.jpg"; ?>');">
 
 						<div class="row" id="row1">
 							<div class="JL_featured_wrap span-33" id="box1">
@@ -141,39 +141,40 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
-								<?php if ( $the_query->have_posts() ) : ?>
-								
-									<!-- pagination here -->
-								
-									<!-- the loop -->
-									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									<?php if ( $the_query->have_posts() ) : ?>
 									
-										<?php if (has_post_thumbnail()) {
-    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-    $bgImage = $thumb[0]; ?>
-    								<img src="<?php echo $bgImage ?>" alt="<?php the_title(); ?>">
-							<?php } ?>
-    
+										<!-- the loop -->
+										<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+										
+											<?php if (has_post_thumbnail()) :
+
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
+
+		    								<div class="imgWrap">
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    								</div><!-- END .imgWrap -->
+
+											<?php endif; ?>
+	    
+										
+											<h2><?php the_title(); ?></h2>
+											<p><?php the_excerpt(); ?></p>
+										
+										<?php endwhile; ?><!-- end of the loop -->
+										
+										<?php wp_reset_postdata(); ?>
 									
-										<h2><?php the_title(); ?></h2>
-										<p><?php the_excerpt(); ?></p>
-									
-									<?php endwhile; ?>
-									<!-- end of the loop -->
+									<?php else : ?>
+										<!-- Don't show anything -->
+									<?php endif; ?> 
 								
-									<!-- pagination here -->
-									
-									<?php wp_reset_postdata(); ?>
-								
-								<?php else : ?>
-									<!-- Don't show anything -->
 								<?php endif; ?>
-								
-								<?php } ?>
 								
 							</div>
 							<div class="JL_featured_wrap span-33" id="box2">
