@@ -136,6 +136,7 @@ get_header(); ?>
 
 						<div class="row" id="row1">
 							<div class="JL_featured_wrap span-33" id="box1">
+
 								<?php 
 				
 	
@@ -157,13 +158,14 @@ get_header(); ?>
 											?>
 
 		    								<div class="imgWrap">
+		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    								</div><!-- END .imgWrap -->
 
 											<?php endif; ?>
 	    
 										
-											<h2><?php the_title(); ?></h2>
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 											<p><?php the_excerpt(); ?></p>
 										
 										<?php endwhile; ?><!-- end of the loop -->
@@ -201,12 +203,13 @@ get_header(); ?>
 										$bgImage = $thumb[0]; 
 									?>
 									<div class="imgWrap">
+									<div class="pane"></div>
 		    							<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    						</div><!-- END .imgWrap -->
 
 		    						<?php endif; ?>
 	
-										<h2><?php the_title(); ?></h2>
+										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
@@ -245,12 +248,13 @@ get_header(); ?>
 											?>
 
 											<div class="imgWrap">
+											<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    								</div><!-- END .imgWrap -->
 
 		    								<?php endif; ?>
 
-										<h2><?php the_title(); ?></h2>
+										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
@@ -320,12 +324,13 @@ get_header(); ?>
 										?>
 
 											<div class="imgWrap">
+											<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    								</div><!-- END .imgWrap -->
 
 		    								<?php endif; ?>
 
-										<h2><?php the_title(); ?></h2>
+										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
@@ -364,13 +369,14 @@ get_header(); ?>
 										?>
 
 		    								<div class="imgWrap">
+		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    								</div><!-- END .imgWrap -->
 
 											<?php endif; ?>
 
 
-										<h2><?php the_title(); ?></h2>
+										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
@@ -409,13 +415,14 @@ get_header(); ?>
 											?>
 
 		    								<div class="imgWrap">
+		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
 		    								</div><!-- END .imgWrap -->
 
 											<?php endif; ?>									
 
 
-										<h2><?php the_title(); ?></h2>
+										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>

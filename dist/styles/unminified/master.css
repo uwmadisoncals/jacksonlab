@@ -1965,8 +1965,7 @@ body.home div#main {
         position: absolute;
         top: 0;
         right: 0;
-        padding: 1em;
-        background: rgba(0, 0, 0, 0.5); }
+        padding: 1em; }
         body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div {
           margin-bottom: 0.6em; }
           body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content div a {
@@ -2058,8 +2057,18 @@ body.home div#main div#primary div#content {
       height: inherit;
       padding: 1.5em;
       position: relative; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap .pane {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: black;
+        z-index: 9;
+        opacity: 0.33; }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrap {
-        overflow: hidden; }
+        overflow: hidden;
+        position: relative; }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap h2 {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -2071,7 +2080,9 @@ body.home div#main div#primary div#content {
         display: block;
         font-size: 18px;
         margin: 0;
-        color: white; }
+        color: white;
+        z-index: 10;
+        font-weight: 600; }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap p {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -2083,7 +2094,9 @@ body.home div#main div#primary div#content {
         display: block;
         font-size: 14px;
         color: white;
-        margin: 0; }
+        margin: 0;
+        z-index: 10;
+        font-weight: 600; }
 
 /**
  * Applies home.php 
