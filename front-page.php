@@ -127,23 +127,125 @@ get_header(); ?>
 
 
 
-				<?php
+				
 
-				 $mod = get_theme_mod( 'jacksonlab_options_id' ); 
 
-				 $the_query = new WP_Query($the_query_args);
-
-				 $the_query_args = array();
-
-				 if($the_query->have_posts()) :
-				 	while($the_query->have_posts() ) :$the_query->the_post(); ?>
+				
 
 						<div class="non-slider-content">
 
 						<div class="row" id="row1">
-							<div class="JL_featured_wrap span-33" id="box1"></div>
-							<div class="JL_featured_wrap span-33" id="box2"></div>
-							<div class="JL_featured_wrap span-33" id="box3"></div>
+							<div class="JL_featured_wrap span-33" id="box1">
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<?php if (has_post_thumbnail()) {
+    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+    $bgImage = $thumb[0]; ?>
+    								<img src="<?php echo $bgImage ?>" alt="<?php the_title(); ?>">
+							<?php } ?>
+    
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
+							<div class="JL_featured_wrap span-33" id="box2">
+								
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id_2' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
+							<div class="JL_featured_wrap span-33" id="box3">
+								
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id_3' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
 						</div>
 
 						<div class="row" id="middle-section">
@@ -151,40 +253,116 @@ get_header(); ?>
 						</div><!-- #middle-section -->
 
 						<div class="row" id="row2">
-							<div class="JL_featured_wrap span-33" id="box1"></div>
-							<div class="JL_featured_wrap span-33" id="box2"></div>
-							<div class="JL_featured_wrap span-33" id="box3"></div>
+							<div class="JL_featured_wrap span-33" id="box1">
+								
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id_4' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
+							<div class="JL_featured_wrap span-33" id="box2">
+								
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id_5' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
+							<div class="JL_featured_wrap span-33" id="box3">
+								
+								<?php 
+				
+	
+								$mod = get_theme_mod( 'jacksonlab_options_id_6' );
+								
+								if($mod != 0) {
+								
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
+								
+								<?php if ( $the_query->have_posts() ) : ?>
+								
+									<!-- pagination here -->
+								
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+									
+										<h2><?php the_title(); ?></h2>
+										<p><?php the_excerpt(); ?></p>
+									
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+								
+									<!-- pagination here -->
+									
+									<?php wp_reset_postdata(); ?>
+								
+								<?php else : ?>
+									<!-- Don't show anything -->
+								<?php endif; ?>
+								
+								<?php } ?>
+								
+							</div>
 						</div>
 
 						</div><!-- END .non-slider-content -->
 
-				 	<?php endwhile; ?>
 				 	
-				 	<?php else :  ?>
-				 		<!--  do stuff if not $the_query->have_posts() -->
-				 		<p>Sorry, no posts matched your criteria.</p>
-
-				 		<div class="non-slider-content">
-
-						<div class="row" id="row1">
-							<div class="JL_featured_wrap span-33" id="box1"></div>
-							<div class="JL_featured_wrap span-33" id="box2"></div>
-							<div class="JL_featured_wrap span-33" id="box3"></div>
-						</div>
-
-						<div class="row" id="middle-section">
-							
-						</div><!-- #middle-section -->
-
-						<div class="row" id="row2">
-							<div class="JL_featured_wrap span-33" id="box1"></div>
-							<div class="JL_featured_wrap span-33" id="box2"></div>
-							<div class="JL_featured_wrap span-33" id="box3"></div>
-						</div>
-
-						</div><!-- END .non-slider-content -->
-
-				 	<?php endif; ?>
 
 
 

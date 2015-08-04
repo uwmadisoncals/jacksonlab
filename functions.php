@@ -169,7 +169,7 @@ $wp_customize->add_control('jacksonlab_options_id_2', array(
       'section'=>'jacksonlab-home-options',
       'type'=>'dropdown-pages',
       'priority'=>'0',//In section
-      'settings'=>'jacksonlab_options_id'
+      'settings'=>'jacksonlab_options_id_2'
 
 ));
 
@@ -186,7 +186,7 @@ $wp_customize->add_control('jacksonlab_options_id_3', array(
       'section'=>'jacksonlab-home-options',
       'type'=>'dropdown-pages',
       'priority'=>'0',//In section
-      'settings'=>'jacksonlab_options_id'
+      'settings'=>'jacksonlab_options_id_3'
 
 ));
 
@@ -203,7 +203,7 @@ $wp_customize->add_control('jacksonlab_options_id_4', array(
       'section'=>'jacksonlab-home-options',
       'type'=>'dropdown-pages',
       'priority'=>'0',//In section
-      'settings'=>'jacksonlab_options_id'
+      'settings'=>'jacksonlab_options_id_4'
 
 ));
 
@@ -220,7 +220,7 @@ $wp_customize->add_control('jacksonlab_options_id_5', array(
       'section'=>'jacksonlab-home-options',
       'type'=>'dropdown-pages',
       'priority'=>'0',//In section
-      'settings'=>'jacksonlab_options_id'
+      'settings'=>'jacksonlab_options_id_5'
 
 ));
 
@@ -237,7 +237,7 @@ $wp_customize->add_control('jacksonlab_options_id_6', array(
       'section'=>'jacksonlab-home-options',
       'type'=>'dropdown-pages',
       'priority'=>'0',//In section
-      'settings'=>'jacksonlab_options_id'
+      'settings'=>'jacksonlab_options_id_6'
 
 ));
 
