@@ -2069,7 +2069,20 @@ body.home div#main div#primary div#content {
         left: 30px;
         display: block;
         font-size: 18px;
-        color: #222222; }
+        color: #222222;
+        margin: 0; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap p {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizelegibility;
+        font-family: "Open Sans", sans-serif;
+        position: absolute;
+        bottom: 30px;
+        left: 30px;
+        display: block;
+        font-size: 14px;
+        color: #222222;
+        margin: 0; }
 
 /**
  * Applies home.php 

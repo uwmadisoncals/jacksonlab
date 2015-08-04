@@ -106,7 +106,7 @@ function my_admin_notice(){
 add_action('admin_notices', 'my_admin_notice');
 */
 
-
+/*
 function custom_field_excerpt() {
 
   global $post;
@@ -127,7 +127,15 @@ function custom_field_excerpt() {
     $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
   }
   return apply_filters('the_excerpt', $text);
+}*/
+
+
+add_action('init', 'my_custom_init');
+
+function my_custom_init() {
+  add_post_type_support( 'page', 'excerpt' );
 }
+
 
 /**** Adding Theme Customizer Options ****/
 function jacksonlab_customize_register($wp_customize) {

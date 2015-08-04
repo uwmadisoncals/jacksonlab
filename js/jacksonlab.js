@@ -59,7 +59,8 @@
 	    	console.log("JL_featured_wrap_w_less: "+JL_featured_wrap_w_less);
 
 
-	    	$(".JL_featured_wrap > h2").css({"max-width":JL_featured_wrap_w_less});
+	    	$(".JL_featured_wrap > h2,.JL_featured_wrap > p").css({"max-width":JL_featured_wrap_w_less});
+
 
 	    	$(".imgWrap").css({"max-height":JL_featured_wrap_hght});
 
