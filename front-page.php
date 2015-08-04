@@ -176,7 +176,9 @@ get_header(); ?>
 								
 								<?php endif; ?>
 								
-							</div>
+							</div><!--END .JL_featured_wrap #box1 -->
+
+
 							<div class="JL_featured_wrap span-33" id="box2">
 								
 								<?php 
@@ -184,24 +186,31 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id_2' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
 								<?php if ( $the_query->have_posts() ) : ?>
 								
-									<!-- pagination here -->
-								
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
+									<?php if (has_post_thumbnail()) :
+
+										$thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+										$bgImage = $thumb[0]; 
+									?>
+									<div class="imgWrap">
+		    							<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    						</div><!-- END .imgWrap -->
+
+		    						<?php endif; ?>
+	
 										<h2><?php the_title(); ?></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
-								
-									<!-- pagination here -->
 									
 									<?php wp_reset_postdata(); ?>
 								
@@ -209,9 +218,10 @@ get_header(); ?>
 									<!-- Don't show anything -->
 								<?php endif; ?>
 								
-								<?php } ?>
+								<?php endif; ?>
 								
-							</div>
+							</div><!--END .JL_featured_wrap #box2 -->
+
 							<div class="JL_featured_wrap span-33" id="box3">
 								
 								<?php 
@@ -219,38 +229,69 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id_3' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
 								<?php if ( $the_query->have_posts() ) : ?>
 								
-									<!-- pagination here -->
-								
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
+											<?php if (has_post_thumbnail()) :
+
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
+
+											<div class="imgWrap">
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    								</div><!-- END .imgWrap -->
+
+		    								<?php endif; ?>
+
 										<h2><?php the_title(); ?></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
-								
-									<!-- pagination here -->
 									
 									<?php wp_reset_postdata(); ?>
 								
-								<?php else : ?>
+									<?php else : ?>
 									<!-- Don't show anything -->
+									<?php endif; ?>
+								
 								<?php endif; ?>
 								
-								<?php } ?>
-								
-							</div>
+							</div><!--END .JL_featured_wrap #box3 -->
 						</div>
 
 						<div class="row" id="middle-section">
+							<?php 
+
+								// the query
+								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => 1749 ) ); ?>
+
+								<?php if ( $the_query->have_posts() ) : ?>
+
+									<!-- pagination here -->
+
+									<!-- the loop -->
+									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+										<h2><?php the_content(); ?></h2>
+									<?php endwhile; ?>
+									<!-- end of the loop -->
+
+									<!-- pagination here -->
+
+									<?php wp_reset_postdata(); ?>
+
+								<?php else : ?>
+									<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+								<?php endif; ?>
 							
+
 						</div><!-- #middle-section -->
 
 						<div class="row" id="row2">
@@ -261,7 +302,7 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id_4' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
@@ -272,13 +313,23 @@ get_header(); ?>
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
+										<?php if (has_post_thumbnail()) :
+
+										    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+										    $bgImage = $thumb[0]; 
+										?>
+
+											<div class="imgWrap">
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    								</div><!-- END .imgWrap -->
+
+		    								<?php endif; ?>
+
 										<h2><?php the_title(); ?></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
-								
-									<!-- pagination here -->
 									
 									<?php wp_reset_postdata(); ?>
 								
@@ -286,9 +337,10 @@ get_header(); ?>
 									<!-- Don't show anything -->
 								<?php endif; ?>
 								
-								<?php } ?>
+							<?php endif ?>
 								
-							</div>
+							</div><!--END .JL_featured_wrap #box1 -->
+
 							<div class="JL_featured_wrap span-33" id="box2">
 								
 								<?php 
@@ -296,24 +348,33 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id_5' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
 								<?php if ( $the_query->have_posts() ) : ?>
 								
-									<!-- pagination here -->
-								
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
+										<?php if (has_post_thumbnail()) :
+
+										    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+										    $bgImage = $thumb[0]; 
+										?>
+
+		    								<div class="imgWrap">
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    								</div><!-- END .imgWrap -->
+
+											<?php endif; ?>
+
+
 										<h2><?php the_title(); ?></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
-								
-									<!-- pagination here -->
 									
 									<?php wp_reset_postdata(); ?>
 								
@@ -321,9 +382,10 @@ get_header(); ?>
 									<!-- Don't show anything -->
 								<?php endif; ?>
 								
-								<?php } ?>
+								<?php endif; ?>
 								
-							</div>
+							</div><!--END .JL_featured_wrap #box2 -->
+
 							<div class="JL_featured_wrap span-33" id="box3">
 								
 								<?php 
@@ -331,24 +393,33 @@ get_header(); ?>
 	
 								$mod = get_theme_mod( 'jacksonlab_options_id_6' );
 								
-								if($mod != 0) {
+								if($mod != 0) :
 								
 								$the_query = new WP_Query( array( 'posts_per_page' => 1, 'page_id' => $mod ) ); ?>
 								
 								<?php if ( $the_query->have_posts() ) : ?>
 								
-									<!-- pagination here -->
-								
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-									
+
+											<?php if (has_post_thumbnail()) :
+
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
+
+		    								<div class="imgWrap">
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    								</div><!-- END .imgWrap -->
+
+											<?php endif; ?>									
+
+
 										<h2><?php the_title(); ?></h2>
 										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
-								
-									<!-- pagination here -->
 									
 									<?php wp_reset_postdata(); ?>
 								
@@ -356,9 +427,9 @@ get_header(); ?>
 									<!-- Don't show anything -->
 								<?php endif; ?>
 								
-								<?php } ?>
+								<?php endif; ?>
 								
-							</div>
+							</div><!--END .JL_featured_wrap #box3 -->
 						</div>
 
 						</div><!-- END .non-slider-content -->

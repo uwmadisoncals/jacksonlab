@@ -49,7 +49,8 @@ http://www.fossildraw.com/draw.php?currow=6&curcol=2&font=3&grid=off&cellh=6&cel
 .owl-carousel .owl-wrapper-outer {
   overflow: hidden;
   position: relative;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
 
 .owl-carousel .owl-wrapper-outer.autoHeight {
   -webkit-transition: height 500ms ease-in-out;
@@ -2069,8 +2070,8 @@ body.home div#main div#primary div#content {
         left: 30px;
         display: block;
         font-size: 18px;
-        color: #222222;
-        margin: 0; }
+        margin: 0;
+        color: white; }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap p {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -2081,7 +2082,7 @@ body.home div#main div#primary div#content {
         left: 30px;
         display: block;
         font-size: 14px;
-        color: #222222;
+        color: white;
         margin: 0; }
 
 /**
