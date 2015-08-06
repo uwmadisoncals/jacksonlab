@@ -273,6 +273,19 @@ body.home{
 							height:inherit;
 							padding:1.5em;
 							position:relative;
+							
+							.coverLink {
+								position:absolute;
+								top:0;
+								left:0;
+								right:0;
+								bottom:0;
+								
+								z-index:15;
+								font-size: 0px;
+								text-indent: -100000px;
+								outline: none;
+							}
 
 							.pane{
 							position:absolute;
@@ -284,6 +297,25 @@ body.home{
 							z-index:9;
 							opacity:0.33;
 							}
+							
+							div.imgWrapContainer {
+								height: 300px;
+								overflow: hidden;
+								
+								div.imgWrapPic {
+									height: 300px;
+									transition: 1.8s;
+								}
+							}
+							
+							
+							
+							div.imgWrapContainer.hovered {
+								div.imgWrapPic {
+									transform: scale(1.1);
+								}
+							}
+							
 
 							div.imgWrap{
 							overflow: hidden;

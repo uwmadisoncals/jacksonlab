@@ -2562,6 +2562,18 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 	    	$(".JL_featured_wrap > h2,.JL_featured_wrap > p").css({"max-width":JL_featured_wrap_w_less});
 
+			
+			$(".coverLink").mouseover(function(e) {
+				var elem = $(this).closest('.imgWrap').find('.imgWrapContainer');
+				
+				$(elem).addClass("hovered");
+			});
+			
+			$(".coverLink").mouseout(function(e) {
+				var elem = $(this).closest('.imgWrap').find('.imgWrapContainer');
+				$(elem).removeClass("hovered");
+			});
+
 
 	    	//$(".imgWrap").css({"max-height":JL_featured_wrap_hght});
 
