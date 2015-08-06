@@ -158,11 +158,16 @@ get_header(); ?>
 											?>
 
 		    								<div class="imgWrap">
-		    								<div class="pane"></div>
-		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								<div class="pane"></div> 
+		    								
+		    									<div class="imgWrapContainer">
+		    										<div class="imgWrapPic" src="<?php echo $bgImage ?>" style="background:url(<?php echo $bgImage; ?>); background-position: center center; background-size: cover;" ></div>
+		    									</div>
+		    									<h2><?php the_title(); ?></h2>
 		    								
 												<p><?php the_excerpt(); ?></p>
+												
+												<a href="<?php the_permalink(); ?>" class="coverLink"><?php the_title(); ?></a>
 		    								
 		    								</div><!-- END .imgWrap -->
 
@@ -215,10 +220,15 @@ get_header(); ?>
 
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
-		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    									<div class="imgWrapContainer">
+		    										<div class="imgWrapPic" src="<?php echo $bgImage ?>" style="background:url(<?php echo $bgImage; ?>); background-position: center center; background-size: cover;" ></div>
+		    									</div>
+		    									<h2><?php the_title(); ?></h2>
 		    								
 												<p><?php the_excerpt(); ?></p>
+												
+												<a href="<?php the_permalink(); ?>" class="coverLink"><?php the_title(); ?></a>
+
 		    								
 		    								</div><!-- END .imgWrap -->
 
@@ -270,10 +280,15 @@ get_header(); ?>
 
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
-		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    									<div class="imgWrapContainer">
+		    										<div class="imgWrapPic" src="<?php echo $bgImage ?>" style="background:url(<?php echo $bgImage; ?>); background-position: center center; background-size: cover;" ></div>
+		    									</div>
+		    									<h2><?php the_title(); ?></h2>
 		    								
 												<p><?php the_excerpt(); ?></p>
+												
+												<a href="<?php the_permalink(); ?>" class="coverLink"><?php the_title(); ?></a>
+
 		    								
 		    								</div><!-- END .imgWrap -->
 
@@ -413,10 +428,15 @@ get_header(); ?>
 
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
-		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    									<div class="imgWrapContainer">
+		    										<div class="imgWrapPic" src="<?php echo $bgImage ?>" style="background:url(<?php echo $bgImage; ?>); background-position: center center; background-size: cover;" ></div>
+		    									</div>
+		    									<h2><?php the_title(); ?></h2>
 		    								
 												<p><?php the_excerpt(); ?></p>
+												
+												<a href="<?php the_permalink(); ?>" class="coverLink"><?php the_title(); ?></a>
+
 		    								
 		    								</div><!-- END .imgWrap -->
 
@@ -469,10 +489,15 @@ get_header(); ?>
 
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
-		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    									<div class="imgWrapContainer">
+		    										<div class="imgWrapPic" src="<?php echo $bgImage ?>" style="background:url(<?php echo $bgImage; ?>); background-position: center center; background-size: cover;" ></div>
+		    									</div>
+		    									<h2><?php the_title(); ?></h2>
 		    								
 												<p><?php the_excerpt(); ?></p>
+												
+												<a href="<?php the_permalink(); ?>" class="coverLink"><?php the_title(); ?></a>
+
 		    								
 		    								</div><!-- END .imgWrap -->
 

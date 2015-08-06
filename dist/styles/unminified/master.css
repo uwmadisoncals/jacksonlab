@@ -2074,6 +2074,16 @@ body.home div#main div#primary div#content {
       height: inherit;
       padding: 1.5em;
       position: relative; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap .coverLink {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 15;
+        font-size: 0px;
+        text-indent: -100000px;
+        outline: none; }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap .pane {
         position: absolute;
         top: 0;
@@ -2083,6 +2093,17 @@ body.home div#main div#primary div#content {
         background-color: black;
         z-index: 9;
         opacity: 0.33; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrapContainer {
+        height: 300px;
+        overflow: hidden; }
+        body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrapContainer div.imgWrapPic {
+          height: 300px;
+          -webkit-transition: 1.8s;
+          transition: 1.8s; }
+      body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrapContainer.hovered div.imgWrapPic {
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1); }
       body.home div#main div#primary div#content div.non-slider-content .row .JL_featured_wrap div.imgWrap {
         overflow: hidden;
         position: relative; }
