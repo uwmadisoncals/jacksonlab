@@ -2176,9 +2176,7 @@ body.blog div#page div.mobileScroll div#main div#primary div#content article {
   body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.featured-image {
     position: relative;
     overflow: hidden;
-    width: min-content;
-    width: -moz-min-content;
-    width: -webkit-min-content; }
+    max-height: 400px; }
     body.blog div#page div.mobileScroll div#main div#primary div#content article div.entry-content div.featured-image div.thumb-caption {
       position: absolute;
       max-height: 30%;

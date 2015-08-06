@@ -39,26 +39,23 @@
 		<h2 class="entry-title"><a href="<?php echo get_post_permalink(); ?>"><?php the_title(); ?></a></h1>
 		<!-- <h1 class="entry-title"><?php the_title(); ?></h1> -->
 
-		<?php if(get_the_author_meta("user_login")): ?>
-		
+
+
 			<span class="post-author">By: 
 
 				<a href="<?php the_author_link(); ?>"> 
-				<?php
-
-				 if(get_the_author_meta("display_name")){
-				 	echo get_the_author_meta("display_name");
-				 }
-				 elseif(get_the_author_meta("user_login")){
-				 		echo get_the_author_meta("user_login");
-				 }
+				<?php the_author();
 				 ?>
 				</a>
 
 			</span>
 
 			<span class="post-date">, <?php echo the_time('F j, Y'); ?></span>
-		<?php  endif; ?>
+
+
+
+
+
 		
 	</header><!-- .entry-header -->
 

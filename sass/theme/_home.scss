@@ -64,9 +64,7 @@ body.blog{
 
 												position:relative;
 												overflow:hidden;
-												width:min-content;
-												width:-moz-min-content;
-												width:-webkit-min-content;
+												max-height: 400px;
 
 												a{
 												  	img{
