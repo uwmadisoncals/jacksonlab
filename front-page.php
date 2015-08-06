@@ -132,7 +132,7 @@ get_header(); ?>
 
 				
 
-						<div class="non-slider-content" style="background-image:url('<?php echo get_stylesheet_directory_uri() ."/images/digitalbg.jpg"; ?>');">
+						<div class="non-slider-content">
 
 						<div class="row" id="row1">
 							<div class="JL_featured_wrap span-33" id="box1">
@@ -152,7 +152,7 @@ get_header(); ?>
 										<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 										
 											<?php if (has_post_thumbnail()) :
-
+												
 											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
 											    $bgImage = $thumb[0]; 
 											?>
@@ -160,13 +160,23 @@ get_header(); ?>
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
 		    								</div><!-- END .imgWrap -->
 
-											<?php endif; ?>
+											
+
+											<?php else: ?>
 	    
 										
 											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-											<p><?php the_excerpt(); ?></p>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
+											<?php endif; ?>
 										
 										<?php endwhile; ?><!-- end of the loop -->
 										
@@ -198,20 +208,31 @@ get_header(); ?>
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
 									<?php if (has_post_thumbnail()) :
+												
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
 
-										$thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-										$bgImage = $thumb[0]; 
-									?>
-									<div class="imgWrap">
-									<div class="pane"></div>
-		    							<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
-		    						</div><!-- END .imgWrap -->
+		    								<div class="imgWrap">
+		    								<div class="pane"></div>
+		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
+		    								</div><!-- END .imgWrap -->
 
-		    						<?php endif; ?>
-	
-										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-										<p><?php the_excerpt(); ?></p>
-									
+											
+
+											<?php else: ?>
+	    
+										
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
+											<?php endif; ?>									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
 									
@@ -242,20 +263,31 @@ get_header(); ?>
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
 											<?php if (has_post_thumbnail()) :
-
+												
 											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
 											    $bgImage = $thumb[0]; 
 											?>
 
-											<div class="imgWrap">
-											<div class="pane"></div>
+		    								<div class="imgWrap">
+		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
 		    								</div><!-- END .imgWrap -->
 
-		    								<?php endif; ?>
+											
 
-										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-										<p><?php the_excerpt(); ?></p>
+											<?php else: ?>
+	    
+										
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
+											<?php endif; ?>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
@@ -283,7 +315,7 @@ get_header(); ?>
 
 									<!-- the loop -->
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-										<h2><?php the_content(); ?></h2>
+										<div class="middleContent"><?php the_content(); ?></div>
 									<?php endwhile; ?>
 									<!-- end of the loop -->
 
@@ -318,20 +350,31 @@ get_header(); ?>
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
 										<?php if (has_post_thumbnail()) :
+												
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
 
-										    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-										    $bgImage = $thumb[0]; 
-										?>
-
-											<div class="imgWrap">
-											<div class="pane"></div>
+		    								<div class="imgWrap">
+		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
 		    								</div><!-- END .imgWrap -->
 
-		    								<?php endif; ?>
+											
 
-										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-										<p><?php the_excerpt(); ?></p>
+											<?php else: ?>
+	    
+										
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
+											<?php endif; ?>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
@@ -363,21 +406,31 @@ get_header(); ?>
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 									
 										<?php if (has_post_thumbnail()) :
-
-										    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
-										    $bgImage = $thumb[0]; 
-										?>
+												
+											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
+											    $bgImage = $thumb[0]; 
+											?>
 
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
 		    								</div><!-- END .imgWrap -->
 
+											
+
+											<?php else: ?>
+	    
+										
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
 											<?php endif; ?>
-
-
-										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-										<p><?php the_excerpt(); ?></p>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->
@@ -409,7 +462,7 @@ get_header(); ?>
 									<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
 											<?php if (has_post_thumbnail()) :
-
+												
 											    $thumb = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large');
 											    $bgImage = $thumb[0]; 
 											?>
@@ -417,13 +470,23 @@ get_header(); ?>
 		    								<div class="imgWrap">
 		    								<div class="pane"></div>
 		    									<img src="<?php echo $bgImage ?>" style="width:100%;" alt="<?php the_title(); ?>">
+		    									<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+		    								
+												<p><?php the_excerpt(); ?></p>
+		    								
 		    								</div><!-- END .imgWrap -->
 
-											<?php endif; ?>									
+											
 
-
-										<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
-										<p><?php the_excerpt(); ?></p>
+											<?php else: ?>
+	    
+										
+											<h2><a href="<?php the_permalink(); ?>" ><?php the_title(); ?></a></h2>
+											
+												<p><?php the_excerpt(); ?></p>
+											
+											
+											<?php endif; ?>
 									
 									<?php endwhile; ?>
 									<!-- end of the loop -->

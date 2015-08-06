@@ -62,7 +62,7 @@
 	    	$(".JL_featured_wrap > h2,.JL_featured_wrap > p").css({"max-width":JL_featured_wrap_w_less});
 
 
-	    	$(".imgWrap").css({"max-height":JL_featured_wrap_hght});
+	    	//$(".imgWrap").css({"max-height":JL_featured_wrap_hght});
 
 	    	//Add clearfix after every third article
 	    	$("article:nth-of-type(3n)").after('<p class=\"cf jlclear\"></p>');
