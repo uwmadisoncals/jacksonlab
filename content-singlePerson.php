@@ -14,8 +14,26 @@
 		$descObj = get_field_object("field_5564a43b10eb6");
 		$photoObj = get_field_object("field_5564b45d56e40");
 
+		$phoneObj = get_field_object("field_55c8bcf160175"); //phone
+		$addressObj = get_field_object("field_55c8bd2460176");//address
+		$emailObj = get_field_object("field_55c8bd4860177");//email
+		$currentProjectObj = get_field_object("field_55c8ccee6cdea");//Current Projects
+		$research_interestsObj = get_field_object("field_55c8cd4d35f4a");//Research and Professional Interests
+		$educationObj = get_field_object("field_55c8bddf6440d");//education
+		$manuscriptsObj = get_field_object("field_55c8bdf76440e");//Manuscripts
+		$presentationsObj = get_field_object("field_55c8ca9d518b4");//Presentations and Lectures
+		$abstractsObj = get_field_object("field_55c8cac1518b5");//Abstracts and Posters
+		$proPositionsObj = get_field_object("field_55c8caf8518b6");//Professional Positions and Responsibilities
+		$honorsObj = get_field_object("field_55c8cb26518b7");//Honors, Grants and Fellowships
+		$membershipsObj = get_field_object("field_55c8cb44518b8");//Memberships, Clubs and committees
+
+
 		$thisID = get_the_ID();
+
+		//logit($addressObj,'$addressObj: ');
+
  ?>
+
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -45,6 +63,14 @@
 			<div class="description people-description">
 				<?php echo $descObj['value']; ?>
 			</div>
+
+			<!-- NEW CONTENT HERE -->
+			
+			<div>
+				<?php echo $phoneObj['value']; ?>
+			</div>
+
+			<!-- END NEW CONTENT -->
 
 			<div class="cf"></div>
 
