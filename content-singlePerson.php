@@ -30,7 +30,8 @@
 
 		$thisID = get_the_ID();
 
-		//logit($addressObj,'$addressObj: ');
+		//logit($phoneObj,'$phoneObj: ');
+		//logit($phoneObj['value'],'$phoneObj[value]: ');
 
  ?>
 
@@ -64,15 +65,110 @@
 				<?php echo $descObj['value']; ?>
 			</div>
 
+
+
+			<div class="cf"></div>
+
 			<!-- NEW CONTENT HERE -->
 			
-			<div>
-				<?php echo $phoneObj['value']; ?>
+			<div id="phone">
+				<?php 
+					if(!$phoneObj['value']=="") : ?>
+						<div class="title"><?php echo $phoneObj['label'];  ?></div>
+						<div><?php echo $phoneObj['value']; ?></div>
+					<?php endif; ?>
+			</div>
+
+			<div id="address">
+				<?php 
+					if(!$addressObj['value']=="") : ?>
+						<div class="title"><?php echo $addressObj['label'];  ?></div>
+						<div><?php echo $addressObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="email">
+				<?php 
+					if(!$emailObj['value']=="") : ?>
+						<div class="title"><?php echo $emailObj['label'];  ?></div>
+						<div><?php echo $emailObj['value']; ?></div>
+					<?php endif; ?>
+			</div>
+
+			<div id="current-projects">
+				<?php 
+					if(!$currentProjectObj['value']=="") : ?>
+						<div class="title"><?php echo $currentProjectObj['label'];  ?></div>
+						<div><?php echo $currentProjectObj['value']; ?></div>
+					<?php endif; ?>
+			</div>
+
+			<div id="research">
+				<?php 
+					if(!$research_interestsObj['value']=="") : ?>
+					<div class="title"><?php echo $research_interestsObj['label'];  ?></div>
+					<div><?php echo $research_interestsObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="education">
+				<?php 
+					if(!$educationObj['value']=="") : ?>
+					<div class="title"><?php echo $educationObj['label'];  ?></div>
+					<div><?php echo $educationObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="manuscripts">
+				<?php 
+					if(!$manuscriptsObj['value']=="") : ?>
+					<div class="title"><?php echo $manuscriptsObj['label'];  ?></div>
+					<div><?php echo $manuscriptsObj['value']; ?></div>
+				<?php endif; ?>
+				
+			</div>
+
+			<div id="presentations">
+				<?php 
+					if(!$presentationsObj['value']=="") : ?>
+					<div class="title"><?php echo $presentationsObj['label'];  ?></div>
+					<div><?php echo $presentationsObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="abstracts">
+				<?php 
+					if(!$abstractsObj['value']=="") : ?>
+					<div class="title"><?php echo $abstractsObj['label'];  ?></div>
+					<div><?php echo $abstractsObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="professional">
+				<?php 
+					if(!$proPositionsObj['value']=="") : ?>
+					<div class="title"><?php echo $proPositionsObj['label'];  ?></div>
+					<div><?php echo $proPositionsObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="honors">
+				<?php 
+					if(!$honorsObj['value']=="") : ?>
+					<div class="title"><?php echo $honorsObj['label'];  ?></div>
+					<div><?php echo $honorsObj['value']; ?></div>
+				<?php endif; ?>
+			</div>
+
+			<div id="memberships">
+				<?php 
+					if(!$membershipsObj['value']=="") : ?>
+					<div class="title"><?php echo $membershipsObj['label'];  ?></div>
+					<div><?php echo $membershipsObj['value']; ?></div>
+				<?php endif; ?>
 			</div>
 
 			<!-- END NEW CONTENT -->
-
-			<div class="cf"></div>
 
 		<?php //the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
