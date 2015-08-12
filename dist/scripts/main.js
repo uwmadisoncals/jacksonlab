@@ -2613,11 +2613,28 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    	//console.log(imageHeight);
 
 	    	$(".people-meta").height(imageHeight);
-
 	    	}
 
+	    	//asign width to people-meta labels
+	    	
+	    	var arr = [];//array to hold label widths
 
-	    }
+	    	$('.people-meta .label').each(function(i){
+
+	    	arr.push( $(this).width() ); //populate arr with widths of labels
+
+	    	});
+
+	    	var maxWidth = Math.max.apply(Math,arr); //get max width
+
+	    	$('.people-meta .label').each(function(i){
+
+	    		$(this).css({width:maxWidth}); //apply maxWidth to all labels
+	    	});
+
+
+
+	    }//END body.is (single-people)
 
 	});
 

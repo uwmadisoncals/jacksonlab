@@ -11,7 +11,7 @@
 		$firstNameObj = get_field_object("field_5564a3db10eb3");
 		$lastNameObj = get_field_object("field_5564a3fb10eb4");
 		$profTitleObj = get_field_object("field_5564a41f10eb5");
-		$descObj = get_field_object("field_5564a43b10eb6");
+		//$descObj = get_field_object("field_5564a43b10eb6");
 		$photoObj = get_field_object("field_5564b45d56e40");
 
 		$phoneObj = get_field_object("field_55c8bcf160175"); //phone
@@ -58,115 +58,113 @@
 			</div><!--END .imageWrapper -->
 
 			<div class="people-meta cf">
-				
-			</div>
+
+						<div id="phone">
+							<?php 
+								if(!$phoneObj['value']=="") : ?>
+									<div class="label"><span><?php echo $phoneObj['label'];  ?>:</span></div>
+									<div class="data"><span><?php echo $phoneObj['value']; ?></span></div>
+								<?php endif; ?>
+						</div>
+
+						<div id="address">
+							<?php 
+								if(!$addressObj['value']=="") : ?>
+									<div class="label"><span><?php echo $addressObj['label'];  ?>:</span></div>
+									<div class="data"><span><p><?php echo $addressObj['value']; ?></p></span></div>
+							<?php endif; ?>
+						</div>
+
+						<div id="email">
+							<?php 
+								if(!$emailObj['value']=="") : ?>
+									<div class="label"><span><?php echo $emailObj['label'];  ?>:</span></div>
+									<div class="data"><span><?php echo $emailObj['value']; ?></span></div>
+								<?php endif; ?>
+						</div>
+
+			</div><!-- END people-meta cf -->
+
 		</div><!-- END topSectionWrapper -->
-			<div class="description people-description">
-				<?php echo $descObj['value']; ?>
-			</div>
 
-
-
-			<div class="cf"></div>
 
 			<!-- NEW CONTENT HERE -->
+			<div class="cf"></div>
 			
-			<div id="phone">
-				<?php 
-					if(!$phoneObj['value']=="") : ?>
-						<div class="title"><?php echo $phoneObj['label'];  ?></div>
-						<div><?php echo $phoneObj['value']; ?></div>
+			<div class="lower-div">
+				<div id="current-projects">
+					<?php 
+						if(!$currentProjectObj['value']=="") : ?>
+							<div class="title"><h3><?php echo $currentProjectObj['label'];  ?></h3></div>
+							<div class="content-area"><?php echo $currentProjectObj['value']; ?></div>
+						<?php endif; ?>
+				</div>
+
+				<div id="research">
+					<?php 
+						if(!$research_interestsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $research_interestsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $research_interestsObj['value']; ?></div>
 					<?php endif; ?>
-			</div>
+				</div>
 
-			<div id="address">
-				<?php 
-					if(!$addressObj['value']=="") : ?>
-						<div class="title"><?php echo $addressObj['label'];  ?></div>
-						<div><?php echo $addressObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
-
-			<div id="email">
-				<?php 
-					if(!$emailObj['value']=="") : ?>
-						<div class="title"><?php echo $emailObj['label'];  ?></div>
-						<div><?php echo $emailObj['value']; ?></div>
+				<div id="education">
+					<?php 
+						if(!$educationObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $educationObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $educationObj['value']; ?></div>
 					<?php endif; ?>
-			</div>
+				</div>
 
-			<div id="current-projects">
-				<?php 
-					if(!$currentProjectObj['value']=="") : ?>
-						<div class="title"><?php echo $currentProjectObj['label'];  ?></div>
-						<div><?php echo $currentProjectObj['value']; ?></div>
+				<div id="manuscripts">
+					<?php 
+						if(!$manuscriptsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $manuscriptsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $manuscriptsObj['value']; ?></div>
 					<?php endif; ?>
-			</div>
+					
+				</div>
 
-			<div id="research">
-				<?php 
-					if(!$research_interestsObj['value']=="") : ?>
-					<div class="title"><?php echo $research_interestsObj['label'];  ?></div>
-					<div><?php echo $research_interestsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
+				<div id="presentations">
+					<?php 
+						if(!$presentationsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $presentationsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $presentationsObj['value']; ?></div>
+					<?php endif; ?>
+				</div>
 
-			<div id="education">
-				<?php 
-					if(!$educationObj['value']=="") : ?>
-					<div class="title"><?php echo $educationObj['label'];  ?></div>
-					<div><?php echo $educationObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
+				<div id="abstracts">
+					<?php 
+						if(!$abstractsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $abstractsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $abstractsObj['value']; ?></div>
+					<?php endif; ?>
+				</div>
 
-			<div id="manuscripts">
-				<?php 
-					if(!$manuscriptsObj['value']=="") : ?>
-					<div class="title"><?php echo $manuscriptsObj['label'];  ?></div>
-					<div><?php echo $manuscriptsObj['value']; ?></div>
-				<?php endif; ?>
-				
-			</div>
+				<div id="professional">
+					<?php 
+						if(!$proPositionsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $proPositionsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $proPositionsObj['value']; ?></div>
+					<?php endif; ?>
+				</div>
 
-			<div id="presentations">
-				<?php 
-					if(!$presentationsObj['value']=="") : ?>
-					<div class="title"><?php echo $presentationsObj['label'];  ?></div>
-					<div><?php echo $presentationsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
+				<div id="honors">
+					<?php 
+						if(!$honorsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $honorsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $honorsObj['value']; ?></div>
+					<?php endif; ?>
+				</div>
 
-			<div id="abstracts">
-				<?php 
-					if(!$abstractsObj['value']=="") : ?>
-					<div class="title"><?php echo $abstractsObj['label'];  ?></div>
-					<div><?php echo $abstractsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
-
-			<div id="professional">
-				<?php 
-					if(!$proPositionsObj['value']=="") : ?>
-					<div class="title"><?php echo $proPositionsObj['label'];  ?></div>
-					<div><?php echo $proPositionsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
-
-			<div id="honors">
-				<?php 
-					if(!$honorsObj['value']=="") : ?>
-					<div class="title"><?php echo $honorsObj['label'];  ?></div>
-					<div><?php echo $honorsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
-
-			<div id="memberships">
-				<?php 
-					if(!$membershipsObj['value']=="") : ?>
-					<div class="title"><?php echo $membershipsObj['label'];  ?></div>
-					<div><?php echo $membershipsObj['value']; ?></div>
-				<?php endif; ?>
-			</div>
+				<div id="memberships">
+					<?php 
+						if(!$membershipsObj['value']=="") : ?>
+						<div class="title"><h3><?php echo $membershipsObj['label'];  ?></h3></div>
+						<div class="content-area"><?php echo $membershipsObj['value']; ?></div>
+					<?php endif; ?>
+				</div>
+			</div><!-- END .lower-div-->
 
 			<!-- END NEW CONTENT -->
 
