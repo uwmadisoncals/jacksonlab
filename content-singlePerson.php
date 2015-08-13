@@ -65,7 +65,7 @@
 									<div class="label"><span><?php echo $phoneObj['label'];  ?>:</span></div>
 									<div class="data"><span><?php echo $phoneObj['value']; ?></span></div>
 								<?php endif; ?>
-						</div>
+						</div><div class="cf"></div>
 
 						<div id="address">
 							<?php 
@@ -73,7 +73,7 @@
 									<div class="label"><span><?php echo $addressObj['label'];  ?>:</span></div>
 									<div class="data"><span><p><?php echo $addressObj['value']; ?></p></span></div>
 							<?php endif; ?>
-						</div>
+						</div><div class="cf"></div>
 
 						<div id="email">
 							<?php 
