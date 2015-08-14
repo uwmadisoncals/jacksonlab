@@ -273,6 +273,9 @@ body.home{
 							height:inherit;
 							padding:1.5em;
 							position:relative;
+
+							&.no-fimg{
+							}
 							
 							.coverLink {
 								position:absolute;

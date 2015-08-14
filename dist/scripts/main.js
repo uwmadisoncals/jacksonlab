@@ -2554,13 +2554,23 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    	var JL_featured_wrap_hght = $('.JL_featured_wrap').height();//height of .JL_featured_wrap
 	    	var JL_featured_wrap_width = $('.JL_featured_wrap').width(); //width of .JL_featured_wrap, not including padding
 	    	var JL_featured_wrap_w_less = JL_featured_wrap_width *.9; //compute 90% of JL_featured_wrap_width
-
 	    	//console.log("JL_featured_wrap_hght: "+JL_featured_wrap_hght);
-	    	console.log("JL_featured_wrap_width: "+JL_featured_wrap_width);
-	    	console.log("JL_featured_wrap_w_less: "+JL_featured_wrap_w_less);
-
-
+	    	//console.log("JL_featured_wrap_width: "+JL_featured_wrap_width);
+	    	//console.log("JL_featured_wrap_w_less: "+JL_featured_wrap_w_less);
 	    	$(".JL_featured_wrap > h2,.JL_featured_wrap > p").css({"max-width":JL_featured_wrap_w_less});
+
+
+
+	    	//apply class if box has no featured image
+	    	$( ".JL_featured_wrap" ).each(function( i ) {
+
+			  if($( this ).find('.imgWrap').length ==0){
+
+			  	$(this).closest('.JL_featured_wrap').addClass('no-fimg');
+
+			  }//endif
+
+			});
 
 			
 			$(".coverLink").mouseover(function(e) {
