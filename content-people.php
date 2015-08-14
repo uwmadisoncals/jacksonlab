@@ -12,50 +12,19 @@
 
 
 
-
-
-<!-- display faculty grouping -->
-<?php if($peopleCatObj['value']==='faculty'):  
-
- 				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
-
- 				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
- 				?>
-
-	<h1><?php echo $choiceLabel; ?></h1>
-
-	<?php get_template_part( 'content', 'people-article' ); ?>
-
-<?php endif; ?>
-
-
 <!-- display research-scientist grouping -->
-<?php if($peopleCatObj['value']==='research-scientist'):  
+<?php  
 
  				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
 
  				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
  				?>
 
-	<h1><?php echo $choiceLabel; ?></h1>
+	<!--<h1><?php// echo $choiceLabel; ?></h1> -->
 
 	<?php get_template_part( 'content', 'people-article' ); ?>
 
-<?php endif; ?>
 
-<!-- display post-doctoral-researcher -->
-<?php if($peopleCatObj['value']==='post-doctoral-researcher'):  
-
- 				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
-
- 				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
- 				?>
-
-	<h1><?php echo $choiceLabel; ?></h1>
-
-	<?php get_template_part( 'content', 'people-article' ); ?>
-
-<?php endif; ?>
 
 
 
