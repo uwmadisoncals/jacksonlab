@@ -25,12 +25,31 @@ get_header(); ?>
 				<?php 
 
 					//Define arguments for new WP Query
-					$args = array(
+					/*$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
 						'meta_key'=>'order_displayed',
 						'orderby'=>'meta_value_num',
 						'order'=>'ASC'
+						);*/
+
+					$args = array(
+						'numberposts'=> -1,
+						'post_type'=>'people',
+							'meta_key'=>'order_displayed',
+							'orderby'=>'meta_value_num',
+							'order'=>'ASC',
+						'meta_query'=>array(
+								'relation'=>'OR',
+								array('key'=>'people_category', 'value'=>'faculty','compare'=>'=' ),
+								array('key'=>'people_category', 'value'=>'research-scientist','compare'=>'='),
+								array('key'=>'people_category', 'value'=>'post-doctoral-researcher','compare'=>'='),
+								array('key'=>'people_category', 'value'=>'graduate-student','compare'=>'='),
+								array('key'=>'people_category', 'value'=>'research-specialist-technician','compare'=>'='),
+								array('key'=>'people_category', 'value'=>'undergraduate','compare'=>'='),
+								array('key'=>'people_category', 'value'=>'alumni','compare'=>'=')
+
+							),//END array
 						);
 
 					//Instantiate new WP Query Object
@@ -44,7 +63,7 @@ get_header(); ?>
 
 
 					while ( $people_query->have_posts() ) : $people_query->the_post(); ?>
-
+						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
 						<?php get_template_part( 'content', 'people' ); ?>
 
 						<?php comments_template( '', true ); ?>

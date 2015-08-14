@@ -7,59 +7,59 @@
  */
 ?>
 
-<?php
+<!-- Variables --> 
+<?php  $peopleCatObj = get_field_object("field_55ce25bc90eb6"); //Person Category ?>
 
-		$firstNameObj = get_field_object("field_5564a3db10eb3");
-		$lastNameObj = get_field_object("field_5564a3fb10eb4");
-		$profTitleObj = get_field_object("field_5564a41f10eb5");
-		$descObj = get_field_object("field_5564a43b10eb6");
-		$photoObj = get_field_object("field_5564b45d56e40");
-		$displayOrderObj = get_field_object("field_55b68b329e479");
 
-		 //echo $firstNameObj['label']; echo $firstNameObj['value']; 
-		 //echo $lastNameObj['label'];
-		 //echo $profTitleObj['label'];
-		 //echo $descObj['label'];
-		 
-		 $thisID = get_the_ID();
 
-		 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<h1 class="entry-title"><a href="<?php echo get_post_permalink($thisID); ?>"><?php the_title(); ?></a></h1>
-		<h3 class="proTitle"><?php  echo $profTitleObj['value']; ?></h3>
 
-	</header><!-- .entry-header -->
+<!-- display faculty grouping -->
+<?php if($peopleCatObj['value']==='faculty'):  
 
-	<div class="entry-content cf">
-		
-	<div class="imageWrapper">
+ 				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
 
-		<a href="<?php echo get_post_permalink($thisID); ?>" title="login"><img src="<?php echo $photoObj['value']['sizes']['large']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260"></a>
-		<div class="readmore">
-			<a href="<?php echo get_post_permalink($thisID); ?>" class="readmoreLink">
-				<p>Read more</p>				
-			</a><!-- END .readmoreLink -->
+ 				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
+ 				?>
 
-		</div><!--END .readmore -->
-	</div><!--END .imageWrapper -->
+	<h1><?php echo $choiceLabel; ?></h1>
 
-	<div class="description people-description">
-		<?php echo $descObj['value']; ?>
-		<?php //echo custom_field_excerpt(); ?>
-	</div>
-	
-	<div class="cf"></div>
-		
+	<?php get_template_part( 'content', 'people-article' ); ?>
 
-		<?php //the_content(); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
-	</div><!-- .entry-content -->
-	<footer class="entry-meta">
-		<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-	</footer><!-- .entry-meta -->
-</article><!-- #post-<?php the_ID(); ?> -->
+<?php endif; ?>
+
+
+<!-- display research-scientist grouping -->
+<?php if($peopleCatObj['value']==='research-scientist'):  
+
+ 				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
+
+ 				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
+ 				?>
+
+	<h1><?php echo $choiceLabel; ?></h1>
+
+	<?php get_template_part( 'content', 'people-article' ); ?>
+
+<?php endif; ?>
+
+<!-- display post-doctoral-researcher -->
+<?php if($peopleCatObj['value']==='post-doctoral-researcher'):  
+
+ 				$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
+
+ 				$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value 
+ 				?>
+
+	<h1><?php echo $choiceLabel; ?></h1>
+
+	<?php get_template_part( 'content', 'people-article' ); ?>
+
+<?php endif; ?>
+
+
+
+
 
 
 
