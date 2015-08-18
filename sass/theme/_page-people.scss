@@ -26,6 +26,10 @@ body.page-people{
 
 			div#content{
 				width:100%;
+				h1.peopleCatTitle{
+				@include fontAntialiasing;
+				text-align:center;
+				}
 				article{
 					background-color:$lightGrayBorder;
 					//padding-bottom:3em;

@@ -2303,6 +2303,11 @@ body.single-people div#main div#primary div#content {
  */
 body.page-people div#main div#primary div#content {
   width: 100%; }
+  body.page-people div#main div#primary div#content h1.peopleCatTitle {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    text-align: center; }
   body.page-people div#main div#primary div#content article {
     background-color: #f4f5f6;
     margin-bottom: 4em;

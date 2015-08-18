@@ -28,9 +28,9 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
 								array('key'=>'people_category', 'value'=>'faculty','compare'=>'=' ),
@@ -54,7 +54,7 @@ get_header(); ?>
  					?>
 		
 
-						<h1> <?php echo $choiceLabel; ?> </h1>
+						<h1 class="peopleCatTitle"> <?php echo $choiceLabel; ?> </h1>
 						<?php while ( $people_query_faculty->have_posts() ) : $people_query_faculty->the_post(); ?>
 
 						<?php get_template_part( 'content', 'people' ); ?>
@@ -66,8 +66,7 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. faculty </p>
-
+				<!-- <p>there are no matching posts. faculty </p> -->
 				<?php endif ?>
 
 				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
@@ -83,9 +82,9 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
 								array('key'=>'people_category', 'value'=>'research-scientist','compare'=>'='),
@@ -109,7 +108,7 @@ get_header(); ?>
 
 						 ?>
 
-						<h1> <?php echo $choiceLabel; ?> </h1>
+						<h1 class="peopleCatTitle"> <?php echo $choiceLabel; ?> </h1>
 
 						<?php while ( $people_query_research_scientist->have_posts() ) : $people_query_research_scientist->the_post(); ?>
 
@@ -122,7 +121,7 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. research-scientist</p>
+					<!-- <p>there are no matching posts. research-scientist</p> -->
 
 				<?php endif ?>
 
@@ -140,9 +139,9 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
 								array('key'=>'people_category', 'value'=>'post-doctoral-researcher','compare'=>'='),
@@ -166,7 +165,7 @@ get_header(); ?>
 
 						 ?>
 
-						<h1> <?php echo $choiceLabel; ?> </h1>
+						<h1 class="peopleCatTitle"> <?php echo $choiceLabel; ?> </h1>
 
 					<?php while ( $people_query_post_doctoral_researcher->have_posts() ) : $people_query_post_doctoral_researcher->the_post(); ?>
 						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
@@ -179,7 +178,7 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. post-doctoral-researcher</p>
+					<!-- <p>there are no matching posts. post-doctoral-researcher</p> -->
 
 				<?php endif ?>
 
@@ -194,9 +193,9 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
 								array('key'=>'people_category', 'value'=>'graduate-student','compare'=>'='),
@@ -220,7 +219,7 @@ get_header(); ?>
 
 					?>
 
-						<h1><?php echo $choiceLabel; ?></h1>
+						<h1 class="peopleCatTitle"><?php echo $choiceLabel; ?></h1>
 
 						<?php while ( $people_query_graduate_student->have_posts() ) : $people_query_graduate_student->the_post(); ?>
 						
@@ -233,13 +232,13 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. graduate-student</p>
+					<!-- <p>there are no matching posts. graduate-student</p> -->
 
 				<?php endif ?>
 
 				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
 
-<!---------------------------------------------------- ------------------------------------------------------------------------- -->
+<!------------------------------------------------ RESEARCH SPECIALIST TECHNICIAN ------------------------------------------- -->
 				<?php 
 
 
@@ -247,19 +246,12 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
-								//array('key'=>'people_category', 'value'=>'faculty','compare'=>'=' ),
-								//array('key'=>'people_category', 'value'=>'research-scientist','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'post-doctoral-researcher','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'graduate-student','compare'=>'='),
 								array('key'=>'people_category', 'value'=>'research-specialist-technician','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'undergraduate','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'alumni','compare'=>'=')
-
 							),//END array
 						);
 
@@ -272,8 +264,18 @@ get_header(); ?>
 
 				if($people_query_research_specialist_technician->have_posts()) :
 
+					$thisCat_posts = $people_query_research_specialist_technician->posts;
+					$thisCatPostID =$thisCat_posts[0]->ID;
+					$peopleCatObj = get_field_object("field_55ce25bc90eb6",$thisCatPostID); //Person Category 
+					$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
+ 					$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value
 
-					while ( $people_query_research_specialist_technician->have_posts() ) : $people_query_research_specialist_technician->the_post(); ?>
+					?>
+
+						<h1 class="peopleCatTitle"><?php echo $choiceLabel; ?></h1>
+
+
+						<?php while ( $people_query_research_specialist_technician->have_posts() ) : $people_query_research_specialist_technician->the_post(); ?>
 						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
 						<?php get_template_part( 'content', 'people' ); ?>
 
@@ -284,13 +286,13 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. research-specialist-technician</p>
+					<!-- <p>there are no matching posts. research-specialist-technician</p> -->
 
 				<?php endif ?>
 
 				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
 
-<!---------------------------------------------------- ------------------------------------------------------------------------- -->
+<!-------------------------------------------------- UNDERGRADUATE ---------------------------------------------------------------- -->
 				<?php 
 
 
@@ -298,19 +300,12 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
-								//array('key'=>'people_category', 'value'=>'faculty','compare'=>'=' ),
-								//array('key'=>'people_category', 'value'=>'research-scientist','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'post-doctoral-researcher','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'graduate-student','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'research-specialist-technician','compare'=>'='),
 								array('key'=>'people_category', 'value'=>'undergraduate','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'alumni','compare'=>'=')
-
 							),//END array
 						);
 
@@ -323,9 +318,17 @@ get_header(); ?>
 
 				if($people_query_undergraduate->have_posts()) :
 
+					$thisCat_posts = $people_query_undergraduate->posts;
+					$thisCatPostID =$thisCat_posts[0]->ID;
+					$peopleCatObj = get_field_object("field_55ce25bc90eb6",$thisCatPostID); //Person Category 
+					$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
+ 					$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value
 
-					while ( $people_query_undergraduate->have_posts() ) : $people_query_undergraduate->the_post(); ?>
-						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
+					?>
+
+						<h1 class="peopleCatTitle"><?php echo $choiceLabel; ?></h1>
+
+						<?php while ( $people_query_undergraduate->have_posts() ) : $people_query_undergraduate->the_post(); ?>
 						<?php get_template_part( 'content', 'people' ); ?>
 
 						<?php comments_template( '', true ); ?>
@@ -335,14 +338,14 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. undergraduate</p>
+					<!-- <p>there are no matching posts. undergraduate</p> -->
 
 				<?php endif ?>
 
 				<?php wp_reset_query();  // Restore global post data stomped by the_post(). ?>
 
 
-<!---------------------------------------------------- ------------------------------------------------------------------------- -->
+<!--------------------------------------------------- ALUMNI ------------------------------------------------------------- -->
 				<?php 
 
 
@@ -350,17 +353,11 @@ get_header(); ?>
 					$args = array(
 						'numberposts'=> -1,
 						'post_type'=>'people',
-							'meta_key'=>'order_displayed',
-							'orderby'=>'meta_value_num',
-							'order'=>'ASC',
+						'meta_key'=>'order_displayed',
+						'orderby'=>'meta_value_num',
+						'order'=>'ASC',
 						'meta_query'=>array(
 								'relation'=>'OR',
-								//array('key'=>'people_category', 'value'=>'faculty','compare'=>'=' ),
-								//array('key'=>'people_category', 'value'=>'research-scientist','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'post-doctoral-researcher','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'graduate-student','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'research-specialist-technician','compare'=>'='),
-								//array('key'=>'people_category', 'value'=>'undergraduate','compare'=>'='),
 								array('key'=>'people_category', 'value'=>'alumni','compare'=>'=')
 
 							),//END array
@@ -375,9 +372,18 @@ get_header(); ?>
 
 				if($people_query_alumni->have_posts()) :
 
+					$thisCat_posts = $people_query_alumni->posts;
+					$thisCatPostID =$thisCat_posts[0]->ID;
+					$peopleCatObj = get_field_object("field_55ce25bc90eb6",$thisCatPostID); //Person Category 
+					$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
+ 					$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value
 
-					while ( $people_query_alumni->have_posts() ) : $people_query_alumni->the_post(); ?>
-						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
+					?>
+
+						<h1 class="peopleCatTitle"><?php echo $choiceLabel; ?></h1>
+
+						<?php while ( $people_query_alumni->have_posts() ) : $people_query_alumni->the_post(); ?>
+
 						<?php get_template_part( 'content', 'people' ); ?>
 
 						<?php comments_template( '', true ); ?>
@@ -387,7 +393,7 @@ get_header(); ?>
 
 				<?php else : ?>
 
-					<p>there are no matching posts. alumni</p>
+					<!-- <p>there are no matching posts. alumni</p> -->
 
 				<?php endif ?>
 
