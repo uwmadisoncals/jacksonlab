@@ -123,7 +123,7 @@ function custom_field_excerpt() {
     $text = str_replace(']]>', ']]>', $text);
     $excerpt_length = $acf_maxLength; // $acf_maxLength defined in people acf group under description field
     $excerpt_more = apply_filters('excerpt_more', ' ' . '[...]');
-    logit($excerpt_more,'$excerpt_more');
+    //logit($excerpt_more,'$excerpt_more');
     $text = wp_trim_words( $text, $excerpt_length, $excerpt_more );
   }
   return apply_filters('the_excerpt', $text);

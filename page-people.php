@@ -168,7 +168,7 @@ get_header(); ?>
 						<h1 class="peopleCatTitle"> <?php echo $choiceLabel; ?> </h1>
 
 					<?php while ( $people_query_post_doctoral_researcher->have_posts() ) : $people_query_post_doctoral_researcher->the_post(); ?>
-						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
+
 						<?php get_template_part( 'content', 'people' ); ?>
 
 						<?php comments_template( '', true ); ?>
@@ -276,7 +276,6 @@ get_header(); ?>
 
 
 						<?php while ( $people_query_research_specialist_technician->have_posts() ) : $people_query_research_specialist_technician->the_post(); ?>
-						<?php //logit($people_query->posts,'$people_query->posts : '); ?>
 						<?php get_template_part( 'content', 'people' ); ?>
 
 						<?php comments_template( '', true ); ?>
