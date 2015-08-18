@@ -245,7 +245,18 @@ cals_search_feed('http://ecals.cals.wisc.edu/feed/', 40, 1, -1);
 			  		<li><a href="#">Research</a></li>
 			  		<li><a href="#">Outreach</a></li>
   				</ul>-->
-				</div>
+	  				<div class="customMenuItems"> 
+	  					<ul class="menu">
+  							<?php if ( is_user_logged_in() ) : ?>
+								<li class="menu-item"><a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fmedia%2Fgallery.php">LAB</a></li>
+	  						<?php endif; ?>
+
+	  						<?php if ( !is_user_logged_in() ) : ?>
+								<li class="menu-item"><a href="<?php echo admin_url(); ?>">Login</a></li>
+	  						<?php endif; ?>
+	  					</ul>
+	  				</div><!-- .customMenuItems -->
+				</div><!-- .centerfix -->
 				
 			</nav><!-- #access -->
 			
