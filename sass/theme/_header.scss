@@ -1,0 +1,20 @@
+header#branding{
+	hgroup.heading{
+		form#searchform{
+			position:static;
+			float:right;
+			margin-top:3.8em;
+
+			div.relative{
+				input#s{
+					height:30px;
+					min-width:90px;
+				}//END input#s
+			}//END .relative
+		}//END #searchform
+	}//END .heading
+}//END header#branding
+
+div#mobile-menu{}//END #mobile-menu
+
+div#mobile-filter{}//END #mobile-filter
