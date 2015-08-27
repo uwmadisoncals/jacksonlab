@@ -253,3 +253,4 @@ $wp_customize->add_control('jacksonlab_options_id_6', array(
 add_action( 'customize_register', 'jacksonlab_customize_register' );
 
 
+remove_action('init', '_show_post_preview' , 10);
