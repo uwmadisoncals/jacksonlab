@@ -188,7 +188,7 @@ $current_colorscheme = $options['link_color'];
 					<?php
 
 // The Query
-query_posts( );
+query_posts('');
 
 // The Loop
 while ( have_posts() ) : the_post();
