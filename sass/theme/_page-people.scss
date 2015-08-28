@@ -53,6 +53,7 @@ body.page-people{
 							margin-bottom:30px;
 							//border-radius:5px;
 							//background-image:url("")
+							overflow:hidden;
 
 							img{
 								display:block;
@@ -60,7 +61,30 @@ body.page-people{
 								//padding-top:35px;
 								width:100%;
 							}
-							div.readmore{
+
+						}
+						div.description{
+							background-color:$lightGrayBorder;
+							display: block;
+							//display: none;
+							float: left;
+							width:60%;
+							//margin-left:2em;
+							//padding:1em;
+							padding: 0 1em 1em 1em;
+							font-size:1.2em;
+							line-height:2em;
+							////max-height: 300px;
+							////height:300px;
+							////overflow:hidden;
+
+							a span.meta-nav{
+								display: none;
+							}//END .meta-nav
+
+						}
+
+						div.readmore{
 								width:100%;
 								height:2em;
 								background-color:$lightGrayBorder;
@@ -88,28 +112,7 @@ body.page-people{
 									}
 								}//END a.readmoreLink
 
-							}//END .readmore
-						}
-						div.description{
-							background-color:$lightGrayBorder;
-							display: block;
-							//display: none;
-							float: left;
-							width:60%;
-							//margin-left:2em;
-							//padding:1em;
-							padding: 0 1em 1em 1em;
-							font-size:1.2em;
-							line-height:2em;
-							////max-height: 300px;
-							////height:300px;
-							////overflow:hidden;
-
-							a span.meta-nav{
-								display: none;
-							}//END .meta-nav
-
-						}
+						}//END .readmore
 					}
 				}
 			}

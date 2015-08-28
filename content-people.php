@@ -33,20 +33,23 @@
 	<div class="imageWrapper">
 
 		<a href="<?php echo get_post_permalink($thisID); ?>" title="login"><img src="<?php echo $photoObj['value']['sizes']['large']; ?>" alt="<?php echo $photoObj['value']['alt'] ?>" width="260"></a>
-		<div class="readmore">
-			<a href="<?php echo get_post_permalink($thisID); ?>" class="readmoreLink">
-				<p>Read more</p>				
-			</a><!-- END .readmoreLink -->
 
-		</div><!--END .readmore -->
 	</div><!--END .imageWrapper -->
 
 	<div class="description people-description">
 		<?php echo $currentProjectObj['value']; ?>
 		<?php //echo custom_field_excerpt(); ?>
 	</div>
+
+
 	
 	<div class="cf"></div>
+			<div class="readmore">
+			<a href="<?php echo get_post_permalink($thisID); ?>" class="readmoreLink">
+				<p>Read more</p>				
+			</a><!-- END .readmoreLink -->
+
+		</div><!--END .readmore -->
 		
 
 		<?php //the_content(); ?>
