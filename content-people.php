@@ -24,7 +24,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><a href="<?php echo get_post_permalink($thisID); ?>"><?php the_title(); ?></a></h1>
-		<h3 class="proTitle"><?php  echo $profTitleObj['value']; ?></h3>
+		<h3 class="proTitle"><?php  //echo $profTitleObj['value']; ?></h3>
 
 	</header><!-- .entry-header -->
 
