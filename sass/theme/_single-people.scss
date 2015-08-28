@@ -29,7 +29,11 @@ body.single-people{
 					nav{}
 					article{
 
-						header{}
+						header{
+							h1.entry-title{
+								font-size:28px;
+							}
+						}
 						div.entry-content{
 
 							div.topSectionWrapper{
@@ -110,6 +114,10 @@ body.single-people{
 									line-height:2em;
 									margin-bottom:3em;
 
+									h2{
+										font-size:18px;
+									}
+
 									div.title{
 										margin:0;
 										padding:0;
@@ -117,7 +125,7 @@ body.single-people{
 										font-size:1.2em;
 										line-height:2em;
 										margin:0;
-										padding:1em 0 0 1em;
+										padding:1em 0 1em 1em;
 										}
 									}//END .title
 

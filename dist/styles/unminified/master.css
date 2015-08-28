@@ -2244,6 +2244,8 @@ body.blog div#page div.mobileScroll div#main div#primary div#content article {
  */
 body.single-people div#main div#primary div#content {
   width: 100%; }
+  body.single-people div#main div#primary div#content article header h1.entry-title {
+    font-size: 28px; }
   body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper {
     margin-bottom: 2em; }
     body.single-people div#main div#primary div#content article div.entry-content div.topSectionWrapper div.imageWrapper {
@@ -2289,6 +2291,8 @@ body.single-people div#main div#primary div#content {
     font-size: 14px;
     line-height: 2em;
     margin-bottom: 3em; }
+    body.single-people div#main div#primary div#content article div.entry-content div.lower-div div h2 {
+      font-size: 18px; }
     body.single-people div#main div#primary div#content article div.entry-content div.lower-div div div.title {
       margin: 0;
       padding: 0; }
@@ -2296,7 +2300,7 @@ body.single-people div#main div#primary div#content {
         font-size: 1.2em;
         line-height: 2em;
         margin: 0;
-        padding: 1em 0 0 1em; }
+        padding: 1em 0 1em 1em; }
     body.single-people div#main div#primary div#content article div.entry-content div.lower-div div div.content-area {
       padding: 0 1em 1em 1em;
       margin: 0; }
@@ -2324,6 +2328,8 @@ body.page-people div#main div#primary div#content {
     background-color: #f4f5f6;
     margin-bottom: 4em;
     padding-left: 1em; }
+    body.page-people div#main div#primary div#content article h1.entry-title {
+      font-size: 28px; }
     body.page-people div#main div#primary div#content article header {
       padding: 1em 0 0 2em; }
     body.page-people div#main div#primary div#content article div.entry-content {
