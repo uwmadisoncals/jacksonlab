@@ -37,6 +37,8 @@ get_header(); ?>
 						//"category__in"=> array(25), //categories, 34:jacksonlab-slide-research , 25:research
 						//"meta_key" =>"jacksonlab-slides-category-field",
 						//"meta_value"=>"research"
+						
+						/*
 						"tax_query"=> array(
 							"relation"=> "OR",
 							array(
@@ -49,7 +51,7 @@ get_header(); ?>
 							"field" => "slug",
 							"terms"=>array("research")
 							)
-						)
+						)*/
 	
 
 						);
@@ -81,11 +83,12 @@ get_header(); ?>
 							$jsSlider_post_ID = $jsSlider_post['value']->ID;
 
 							$jlSlider_excerpt = $jsSlider_post['value']->post_excerpt;
+
 							$jsSlider_post_url = get_post_permalink( $jsSlider_post_ID );
 
 							//debug variables
 							//logit($jsSlider_post,'$jsSlider_post: ');
-							//logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
+							logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
 							//logit($jsSlider_post_url,'$jsSlider_post_url: ');
 							//logit($thisID,'$thisID: ');
 							//logit($field_objects,'$field_objects: ');
