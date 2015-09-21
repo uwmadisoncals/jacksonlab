@@ -13,6 +13,18 @@ header#branding{
 			}//END .relative
 		}//END #searchform
 	}//END .heading
+	nav#access{
+		ul ul{
+			box-shadow:none;
+		}
+		div.centerfix{
+
+				ul li a{
+					text-transform: uppercase;
+				}
+
+		}//END .centerfix
+	}//END nav#access
 }//END header#branding
 
 div#mobile-menu{}//END #mobile-menu

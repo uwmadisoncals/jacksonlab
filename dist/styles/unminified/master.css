@@ -1938,6 +1938,11 @@ header#branding hgroup.heading form#searchform {
   header#branding hgroup.heading form#searchform div.relative input#s {
     height: 30px;
     min-width: 90px; }
+header#branding nav#access ul ul {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+header#branding nav#access div.centerfix ul li a {
+  text-transform: uppercase; }
 
 /**
  * Applies to the template "no sidebar". See template_no_sidebar.php.
