@@ -88,7 +88,7 @@ get_header(); ?>
 
 							//debug variables
 							//logit($jsSlider_post,'$jsSlider_post: ');
-							logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
+							//logit($jlSlider_excerpt,'$jlSlider_excerpt: ');
 							//logit($jsSlider_post_url,'$jsSlider_post_url: ');
 							//logit($thisID,'$thisID: ');
 							//logit($field_objects,'$field_objects: ');
