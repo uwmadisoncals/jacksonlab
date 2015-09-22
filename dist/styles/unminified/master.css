@@ -2386,9 +2386,78 @@ body.page-people div#main div#primary div#content {
             border: 0; }
 
 /**
+ * Applies to page-people.php
+ */
+body.page-alumni div#main div#primary div#content {
+  width: 100%; }
+  body.page-alumni div#main div#primary div#content h1.peopleCatTitle {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    text-align: center; }
+  body.page-alumni div#main div#primary div#content article header {
+    padding: 1em 0 0 2em; }
+    body.page-alumni div#main div#primary div#content article header h1.entry-title {
+      font-size: 24px;
+      font-family: "Open Sans", Helvetica, sans-serif; }
+    body.page-alumni div#main div#primary div#content article header p.degree, body.page-alumni div#main div#primary div#content article header p.current_pos {
+      font-size: 16px;
+      text-indent: 30px;
+      font-family: "Open Sans", Helvetica, sans-serif; }
+      body.page-alumni div#main div#primary div#content article header p.degree span, body.page-alumni div#main div#primary div#content article header p.current_pos span {
+        font-weight: 700; }
+  body.page-alumni div#main div#primary div#content article div.entry-content {
+    padding: 0 2em 2em 2em; }
+    body.page-alumni div#main div#primary div#content article div.entry-content div.imageWrapper {
+      width: 300px;
+      height: 300px;
+      display: block;
+      float: left;
+      margin-bottom: 30px;
+      overflow: hidden; }
+      body.page-alumni div#main div#primary div#content article div.entry-content div.imageWrapper img {
+        display: block;
+        width: 100%; }
+    body.page-alumni div#main div#primary div#content article div.entry-content div.description {
+      background-color: #f4f5f6;
+      display: block;
+      float: left;
+      width: 60%;
+      padding: 0 1em 1em 1em;
+      font-size: 1.2em;
+      line-height: 2em; }
+      body.page-alumni div#main div#primary div#content article div.entry-content div.description a span.meta-nav {
+        display: none; }
+    body.page-alumni div#main div#primary div#content article div.entry-content div.readmore {
+      width: 100%;
+      height: 2em;
+      background-color: #f4f5f6;
+      margin: 0 auto;
+      padding: 6px 0 6px 0;
+      border: 0; }
+      body.page-alumni div#main div#primary div#content article div.entry-content div.readmore a.readmoreLink {
+        display: block;
+        width: 98%;
+        height: 2em;
+        margin: 0;
+        padding: 0;
+        border: 0; }
+        body.page-alumni div#main div#primary div#content article div.entry-content div.readmore a.readmoreLink p {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          text-rendering: optimizelegibility;
+          text-align: center;
+          color: #d68a28;
+          font-size: 18px;
+          font-weight: 600;
+          margin: 0;
+          padding: 0;
+          border: 0; }
+
+/**
  * Applies to 404.php.
  */
-.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.blog div#page header#branding hgroup.heading h1#site-title, body.blog div#page header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
+.accessibleHide, body.page-template-template_no_sidebar header#branding hgroup.heading h1#site-title, body.page-template-template_no_sidebar header#branding hgroup.heading h2#site-description, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.home div#main div#primary div#content div.non-slider-content article.loop-default, body.home header#branding hgroup.heading h1#site-title, body.home header#branding hgroup.heading h2#site-description, body.blog div#page header#branding hgroup.heading h1#site-title, body.blog div#page header#branding hgroup.heading h2#site-description, body.page header#branding hgroup.heading h1#site-title, body.page header#branding hgroup.heading h2#site-description, body.single header#branding hgroup.heading h1#site-title, body.single header#branding hgroup.heading h2#site-description, body.single-people header#branding hgroup.heading h1#site-title, body.single-people header#branding hgroup.heading h2#site-description, body.page-people header#branding hgroup.heading h1#site-title, body.page-people header#branding hgroup.heading h2#site-description, body.page-alumni header#branding hgroup.heading h1#site-title, body.page-alumni header#branding hgroup.heading h2#site-description, body.error404 header#branding hgroup.heading h1#site-title, body.error404 header#branding hgroup.heading h2#site-description {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

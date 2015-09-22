@@ -1,0 +1,139 @@
+/**
+ * Applies to page-people.php
+ */
+
+body.page-alumni{
+
+	header#branding{
+
+		hgroup.heading{
+
+			h1#site-title{
+			@extend .accessibleHide;
+			}
+
+			h2#site-description{
+			@extend .accessibleHide;
+			}
+
+		}
+
+	}
+
+	div#main{
+
+		div#primary{
+
+			div#content{
+				width:100%;
+				//min-width: 938px;
+				h1.peopleCatTitle{
+				@include fontAntialiasing;
+				text-align:center;
+				}
+				article{
+
+					header{
+						
+						padding:1em 0 0 2em;
+
+						h1.entry-title{
+							font-size:24px;
+							font-family:"Open Sans",Helvetica, sans-serif;
+							a{
+								//color:$grayBorder;
+							}
+						}
+
+						p.degree, p.current_pos{
+							font-size: 16px;
+							text-indent:30px;
+							font-family:"Open Sans",Helvetica, sans-serif;
+
+							span{
+							font-weight:700;
+							}
+						}
+
+					}
+
+					div.entry-content{
+						//background-color:$lightGrayBorder;
+						padding: 0 2em 2em 2em;
+						div.imageWrapper{
+							//background-color:$grayBorder;
+							width:300px;
+							height:300px;
+							display:block;
+							float:left;
+							margin-bottom:30px;
+							//border-radius:5px;
+							//background-image:url("")
+							overflow:hidden;
+
+							img{
+								display:block;
+								//padding-left:35px;
+								//padding-top:35px;
+								width:100%;
+							}
+
+						}
+						div.description{
+							background-color:$lightGrayBorder;
+							display: block;
+							//display: none;
+							float: left;
+							width:60%;
+							//margin-left:2em;
+							//padding:1em;
+							padding: 0 1em 1em 1em;
+							font-size:1.2em;
+							line-height:2em;
+							////max-height: 300px;
+							////height:300px;
+							////overflow:hidden;
+
+							a span.meta-nav{
+								display: none;
+							}//END .meta-nav
+
+						}
+
+						div.readmore{
+								width:100%;
+								height:2em;
+								background-color:$lightGrayBorder;
+								margin:0 auto;
+								padding:6px 0 6px 0;
+								border:0;
+
+								a.readmoreLink{
+								display:block;
+								//background-color:green;
+								width:98%;
+								height:2em;
+								margin:0;
+								padding:0;
+								border:0;
+									p{
+										@include fontAntialiasing;
+										text-align: center;
+										color:#d68a28;
+										font-size:18px;
+										font-weight: 600;
+										margin:0;
+										padding:0;
+										border:0;
+									}
+								}//END a.readmoreLink
+
+						}//END .readmore
+					}
+				}
+			}
+		}
+
+	}
+
+}
