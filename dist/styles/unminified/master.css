@@ -2400,6 +2400,8 @@ body.page-alumni div#main div#primary div#content {
     body.page-alumni div#main div#primary div#content article header h1.entry-title {
       font-size: 24px;
       font-family: "Open Sans", Helvetica, sans-serif; }
+      body.page-alumni div#main div#primary div#content article header h1.entry-title a {
+        color: #d18e19; }
     body.page-alumni div#main div#primary div#content article header p.degree, body.page-alumni div#main div#primary div#content article header p.current_pos {
       font-size: 16px;
       text-indent: 30px;
