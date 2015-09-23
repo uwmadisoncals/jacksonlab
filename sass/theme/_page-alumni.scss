@@ -42,6 +42,9 @@ body.page-alumni{
 							font-family:"Open Sans",Helvetica, sans-serif;
 							a{
 								color:#d18e19;
+								&:hover{
+									border-bottom-color:#d18e19;
+								}
 							}
 						}
 
