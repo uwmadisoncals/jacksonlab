@@ -25,7 +25,7 @@ get_header(); ?>
 				<?php 
 
 					$args = array(
-						'numberposts'=> -1,
+						'posts_per_page'=>-1,
 						'post_type'=>'people',
 						'meta_key'=>'order_displayed',
 						'orderby'=>'meta_value_num',
@@ -37,13 +37,13 @@ get_header(); ?>
 						);
 
 					//Instantiate new WP Query Object
-					$people_query_faculty = new WP_Query($args);
+					$people_query_alum = new WP_Query($args);
 
 				 ?>
 
 				<?php 
 
-				if($people_query_faculty->have_posts()) : 
+				if($people_query_alum->have_posts()) : 
 
 					$thisCat_posts = $people_query_faculty->posts;
 					$thisCatPostID =$thisCat_posts[0]->ID;
@@ -54,7 +54,7 @@ get_header(); ?>
 		
 
 						<h1 class="peopleCatTitle"> <?php echo $choiceLabel; ?> </h1>
-						<?php while ( $people_query_faculty->have_posts() ) : $people_query_faculty->the_post(); ?>
+						<?php while ( $people_query_alum->have_posts() ) : $people_query_alum->the_post(); ?>
 
 						<?php get_template_part( 'content', 'alumni' ); ?>
 
