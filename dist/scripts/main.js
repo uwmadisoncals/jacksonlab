@@ -2507,7 +2507,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 	$("#jacksonlab-owl-carousel").owlCarousel({
  
-      autoPlay: 10000, //Set AutoPlay to 3 seconds
+     // autoPlay: 10000, //Set AutoPlay to 3 seconds
       singleItem:true,
 
  
@@ -2541,14 +2541,17 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    //Applies enclosed js to template page-home.php
 	    if($('body').is(".page-home")){
 
+	    	
 	    	//Generate dimensions vals for slider elements
 	    	var owlItemHeight = $('.owl-item').height(); //get .owl-item height
-	    	//console.log(owlItemHeight);
+	    	//var owlItemHeight = 562;
+	    	console.log(owlItemHeight);
  			$(".text-content").height(owlItemHeight); //give .text-content height of owlItemHeight
 			$(".owl-item div img").css({"max-height":owlItemHeight});
 	    	var SliderImgHeight = $(".owl-item div img").height();
 	    	var SliderImgWidth = $(".owl-item div img").width();
-	    	//console.log("image height:"+ SliderImgHeight +". image Width: "+ SliderImgWidth+".");
+	    	console.log("image height:"+ SliderImgHeight +". image Width: "+ SliderImgWidth+".");
+
 
 	    	//Generate dimension vals for .JL_featured_wrap img
 	    	var JL_featured_wrap_hght = $('.JL_featured_wrap').height();//height of .JL_featured_wrap

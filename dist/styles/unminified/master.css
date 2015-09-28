@@ -1968,7 +1968,7 @@ body.home div#main {
         display: block;
         width: 60%;
         height: auto;
-        background-size: contain; }
+        background-size: cover; }
       body.home div#main div#primary div#content div.slider-content div#jacksonlab-owl-carousel div.owl-wrapper-outer div.owl-wrapper div.owl-item div div.text-content {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
