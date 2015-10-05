@@ -6,7 +6,7 @@
 
 	$("#jacksonlab-owl-carousel").owlCarousel({
  
-      autoPlay: 10000, //Set AutoPlay to 3 seconds
+      //autoPlay: 10000, //Set AutoPlay to 3 seconds
       singleItem:true,
 
  
@@ -44,7 +44,7 @@
 	    	//Generate dimensions vals for slider elements
 	    	var owlItemHeight = $('.owl-item').height(); //get .owl-item height
 	    	//var owlItemHeight = 562;
-	    	console.log(owlItemHeight);
+	    	console.log("owlItemHeight: "+owlItemHeight);
  			$(".text-content").height(owlItemHeight); //give .text-content height of owlItemHeight
 			$(".owl-item div img").css({"max-height":owlItemHeight});
 	    	var SliderImgHeight = $(".owl-item div img").height();
