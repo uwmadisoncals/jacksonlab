@@ -6,7 +6,7 @@
 
 	$("#jacksonlab-owl-carousel").owlCarousel({
  
-     // autoPlay: 10000, //Set AutoPlay to 3 seconds
+      autoPlay: 10000, //Set AutoPlay to 3 seconds
       singleItem:true,
 
  
