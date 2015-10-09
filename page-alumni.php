@@ -45,11 +45,15 @@ get_header(); ?>
 
 				if($people_query_alum->have_posts()) : 
 
-					$thisCat_posts = $people_query_faculty->posts;
+					$thisCat_posts = $people_query_alum->posts;
 					$thisCatPostID =$thisCat_posts[0]->ID;
 					$peopleCatObj = get_field_object("field_55ce25bc90eb6",$thisCatPostID); //Person Category 
 					$choicesArr = $peopleCatObj['choices']; //create associative array with value-label pairings
  					$choiceLabel = $choicesArr[ $peopleCatObj['value'] ]; //get the label associated with current value
+ 					//logit($thisCatPostID,'$thisCatPostID: ');
+ 					//logit($peopleCatObj,'$peopleCatObj: ');
+ 					//logit($choicesArr,'$choicesArr: ');
+ 					//logit($choiceLabel,'$choiceLabel: ');
  					?>
 		
 
