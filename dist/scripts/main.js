@@ -2541,7 +2541,9 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    //Applies enclosed js to template page-home.php
 	    if($('body').is(".page-home")){
 
-	    	
+	    	var sliderSizeInit = function(){
+	    	console.log("sliderSizeInit fired!");
+
 	    	//Generate dimensions vals for slider elements
 	    	var owlItemHeight = $('.owl-item').height(); //get .owl-item height
 	    	//var owlItemHeight = 562;
@@ -2561,6 +2563,12 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 	    	//console.log("JL_featured_wrap_width: "+JL_featured_wrap_width);
 	    	//console.log("JL_featured_wrap_w_less: "+JL_featured_wrap_w_less);
 	    	$(".JL_featured_wrap > h2,.JL_featured_wrap > p").css({"max-width":JL_featured_wrap_w_less});
+
+	    	};
+
+	    	//sliderSizeInit();
+
+	    	setTimeout(sliderSizeInit,250);
 
 
 
