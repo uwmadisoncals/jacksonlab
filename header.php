@@ -252,7 +252,7 @@ cals_search_feed('http://ecals.cals.wisc.edu/feed/', 40, 1, -1);
 	  						<?php endif; ?>
 
 	  						<?php if ( !is_user_logged_in() ) : ?>
-								<li class="menu-item"><a href="<?php echo admin_url(); ?>">Login</a></li>
+								<li class="menu-item"><a href="<?php echo home_url(); ?>">Login</a></li>
 	  						<?php endif; ?>
 	  					</ul>
 	  				</div><!-- .customMenuItems -->
