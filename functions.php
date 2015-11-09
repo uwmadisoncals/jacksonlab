@@ -252,4 +252,21 @@ $wp_customize->add_control('jacksonlab_options_id_6', array(
 }
 add_action( 'customize_register', 'jacksonlab_customize_register' );
 
+/**
+ * WordPress function for redirecting users on login based on user role
+ */
+function my_login_redirect( $url, $request, $user ){
+    if( $user && is_object( $user ) && is_a( $user, 'WP_User' ) ) {
+        if( $user->has_cap( 'administrator' ) ) {
+           // $url = admin_url();
+           $url = home_url();
+        } else {
+            $url = home_url();
+        }
+    }
+    return $url;
+}
+
+add_filter('login_redirect', 'my_login_redirect', 10, 3 );
+
 
