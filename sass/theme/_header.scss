@@ -23,6 +23,15 @@ header#branding{
 					text-transform: uppercase;
 				}
 
+				div.customMenuItems{
+					ul.menu{
+						li.menu-item{
+							a{}
+						}
+						ul.sub-menu{}
+					}
+				}//END .customMenuItems
+
 		}//END .centerfix
 	}//END nav#access
 }//END header#branding

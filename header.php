@@ -248,7 +248,21 @@ cals_search_feed('http://ecals.cals.wisc.edu/feed/', 40, 1, -1);
 	  				<div class="customMenuItems"> 
 	  					<ul class="menu">
   							<?php if ( is_user_logged_in() ) : ?>
-								<li class="menu-item"><a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fmedia%2Fgallery.php">LAB</a></li>
+								<li class="menu-item">
+									<a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fmedia%2Fgallery.php">LAB</a>
+									<ul class="sub-menu">
+										<li class="menu-item">
+											<a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fmedia%2Fgallery.php">media</a>
+											<ul class="sub-menu">
+												<li class="menu-item"><a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fmedia%2Fseasonal.php">Seasonal Growth</a></li>
+
+											</ul>
+										</li>
+										<li class="menu-item"><a href="https://agronomy.wisc.edu/Shibboleth.sso/Login?target=%2Fjackson%2Fuser%2Fagenda.php">agenda</a></li>
+										<li class="menu-item"><a href="#">personal page</a></li>
+									</ul>
+								</li>
+
 	  						<?php endif; ?>
 
 	  						<?php if ( !is_user_logged_in() ) : ?>
