@@ -249,10 +249,10 @@ cals_search_feed('http://ecals.cals.wisc.edu/feed/', 40, 1, -1);
 	  					<ul class="menu">
   							<?php if ( is_user_logged_in() ) : ?>
 								<li class="menu-item">
-									<a href="agronomy.wisc.edu/jackson/media/gallery.php">LAB</a>
+									<a href="https://agronomy.wisc.edu/jackson/media/gallery.php">LAB</a>
 									<ul class="sub-menu">
 										<li class="menu-item">
-											<a href="agronomy.wisc.edu/jackson/media/gallery.php">media</a>
+											<a href="https://agronomy.wisc.edu/jackson/media/gallery.php">media</a>
 											<ul class="sub-menu">
 												<li class="menu-item"><a href="https://agronomy.wisc.edu/jackson/media/seasonal.php">Seasonal Growth</a></li>
 
