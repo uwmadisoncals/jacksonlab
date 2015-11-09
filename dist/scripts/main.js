@@ -2568,7 +2568,7 @@ responsive:!0,responsiveRefreshRate:200,responsiveBaseWidth:g,baseClass:"owl-car
 
 	    	//sliderSizeInit();
 
-	    	setTimeout(sliderSizeInit,250);
+	    	setTimeout(sliderSizeInit,500);
 
 
 

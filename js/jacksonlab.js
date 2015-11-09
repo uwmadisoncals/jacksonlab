@@ -67,7 +67,7 @@
 
 	    	//sliderSizeInit();
 
-	    	setTimeout(sliderSizeInit,250);
+	    	setTimeout(sliderSizeInit,500);
 
 
 
