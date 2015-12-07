@@ -258,7 +258,7 @@ cals_search_feed('http://ecals.cals.wisc.edu/feed/', 40, 1, -1);
 
 											</ul>
 										</li>
-										<li class="menu-item"><a href="https://agronomy.wisc.edu/jackson/user/agenda.php">agenda</a></li>
+										<li class="menu-item"><a href="https://uwmadison.app.box.com/files/0/f/3057793855/Jackson_Lab">agenda</a></li>
 										<!--<li class="menu-item"><a href="#">personal page</a></li>-->
 									</ul>
 								</li>
